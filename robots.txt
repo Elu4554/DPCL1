@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 User-agent: *
 Allow: /
+=======
+User-agent: *
+Allow: /
+>>>>>>> origin/master
