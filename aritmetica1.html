@@ -90,26 +90,7 @@
 
     
     <script>
-        // Inicializamos el valor de localStorage si no existe
-        if (!localStorage.getItem('contador')) {
-            localStorage.setItem('contador', 0);
-        }
-
-        // Función para actualizar el valor en el HTML
-        function actualizarValor() {
-            const valor = localStorage.getItem('contador');
-            document.getElementById('valor').textContent = valor;
-        }
-
-        // Actualizamos el valor al cargar la página
-        actualizarValor();
-
-        // Escuchamos cambios en el localStorage para sincronizar entre pestañas
-        window.addEventListener('storage', (event) => {
-            if (event.key === 'contador') {
-                actualizarValor();
-            }
-        });
+        
 
         document.getElementById("mas").addEventListener("click", function() {
             var div = document.getElementById("op");
