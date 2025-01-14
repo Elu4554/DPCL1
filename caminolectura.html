@@ -47,9 +47,7 @@
         <img class="imagen2" src="imagenes/fxemoji--pencil (1).png" alt="lapiz" width="200">
     </div>
 
-    <div class="imagen-overlay3">
-        <img class="imagen3" src="imagenes/solar--glasses-line-duotone.png" alt="lentes" width="200">
-    </div>
+    
 
     <h1>Lectura critica</h1>
 
@@ -84,6 +82,22 @@
         if (!localStorage.getItem('contador')) {
             localStorage.setItem('contador', 0);
         }
+        
+        // Función para actualizar el valor en el HTML
+        function actualizarValor() {
+            const valor = localStorage.getItem('contador');
+            document.getElementById('valor').textContent = valor;
+        }
+
+        // Actualizamos el valor al cargar la página
+        actualizarValor();
+
+        // Escuchamos cambios en el localStorage para sincronizar entre pestañas
+        window.addEventListener('storage', (event) => {
+            if (event.key === 'contador') {
+                actualizarValor();
+            }
+        });
         
         
 

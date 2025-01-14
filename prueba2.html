@@ -12,10 +12,7 @@
     <link rel="icon" href="imagenes/Icono DPCL (1).png" type="image/x-icon">
     <nav> 
         <h1 class = "logo"><a href="index.html"><img class = "imgDPCL" src="imagenes/Icono DPCL (1).png" alt="DPCL"></a></h1>
-        <div class="trofeo">
-            <img id = "trofeo" src="imagenes/stash--trophy-solid.png" alt="trofeo">
-            <span id="valor" class="textos">0</span>
-        </div>
+        
         <button id = "mas" class="mas"><img class = "menu" src="imagenes/ic--round-menu.png" alt="menu"></button>
         
     </nav>
@@ -227,6 +224,22 @@
                 actualizarValor();
             }
         });
+
+        if (!localStorage.getItem('contadorRacha')) {
+            localStorage.setItem('contadorRacha', 0);
+        }
+
+        // Función para actualizar el contador de racha en la página
+        function actualizarRacha() {
+            const contadorRacha = localStorage.getItem("contadorRacha") || 0;
+            document.getElementById("contadorRacha").innerText = `${contadorRacha} días`;
+        }
+
+        // Ejecutar la función al cargar la página
+        window.onload = actualizarRacha;
+
+        // Llama a la función para actualizar el contador inmediatamente
+        actualizarRacha();
     </script>
 
 </body>
