@@ -273,6 +273,10 @@ ul li:last-child {
     color: red;
 }
 
+.incorrectojeje {
+    color: #e67e22;
+}
+
 #mensaje {
     display: flex;
     justify-content: center;
