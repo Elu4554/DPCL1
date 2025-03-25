@@ -106,11 +106,11 @@
         // Evento para el botón que suma 30, pero solo una vez
         document.getElementById('regreso5').addEventListener('click', () => {
             // Verificamos si ya se sumaron los puntos una vez
-            if (localStorage.getItem('botonPresionado5') !== 'true') {
+            if (localStorage.getItem('botonPresionado5Log') !== 'true') {
                 let valorActual = parseInt(localStorage.getItem('contador'));
                 valorActual += 30;
                 localStorage.setItem('contador', valorActual);
-                localStorage.setItem('botonPresionado5', 'true');  // Registramos que ya se sumó
+                localStorage.setItem('botonPresionado5Log', 'true');  // Registramos que ya se sumó
                 actualizarValor();
             }
         });
