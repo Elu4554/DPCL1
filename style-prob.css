@@ -633,7 +633,7 @@ footer {
     .abajo{
         margin-bottom: 500px;
     }
-    
+
     .barra {
         margin-top: 30px;
         margin-bottom: -80px;
@@ -654,6 +654,14 @@ footer {
 }
 
 .barras{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.barras2{
     display: flex;
     flex-direction: column;
     justify-content: center;
