@@ -633,6 +633,19 @@ footer {
     .abajo{
         margin-bottom: 500px;
     }
+    
+    .barra {
+        margin-top: 30px;
+        margin-bottom: -80px;
+    }
+    
+    .barras{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .barra {
