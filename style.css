@@ -346,6 +346,11 @@ footer {
         margin-top: 30px;
         margin-bottom: -80px;
     }
+
+    .barraFel {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
     
     .barras{
         display: flex;
@@ -408,6 +413,10 @@ body {
 .barra {
     margin-top: 30px;
     margin-bottom: -80px;
+}
+
+.barraFel {
+    margin-top: 30px;
 }
 
 .barras{
