@@ -636,7 +636,7 @@ footer {
 
     .barra {
         margin-top: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 300px;
     }
 
     .barraFel {
@@ -650,6 +650,10 @@ footer {
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+
+    .contenedor{
+        margin-top: 30px;
     }
 }
 
