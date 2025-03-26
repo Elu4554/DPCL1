@@ -652,8 +652,12 @@ footer {
         text-align: center;
     }
 
-    .contenedor{
+    #contenedor{
         margin-top: 30px;
+    }
+
+    #feliz{
+        margin-top: 50px;
     }
 }
 
