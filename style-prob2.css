@@ -1,0 +1,321 @@
+.pipi {
+    background-color: rgb(214, 181, 245);
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    border-color: rgb(196, 155, 235);
+    border-radius: 5%;
+}
+
+.pipi2 {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+#boton1pipi {
+    margin-top: 10px;
+    background-color: rgb(214, 181, 245);
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    border-color: rgb(196, 155, 235);
+    border-radius: 5%;
+    width: 120px;
+    height: 38px;
+    text-align: center;
+    align-items: center; /* Asegura que el texto esté centrado dentro del botón */
+}
+
+#boton1pipi:active{
+    background-color: rgb(196, 155, 235);
+    border-color: rgb(178, 127, 226);
+}
+
+#boton3pipi{
+    margin-top: 10px;
+    background-color: rgb(214, 181, 245);
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    border-color: rgb(196, 155, 235);
+    border-radius: 5%;
+    
+    height: 50px;
+    text-align: center;
+    align-items: center; /* Asegura que el texto esté centrado dentro del botón */
+}
+
+#problemapipi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+#pipis{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: justify;
+    text-align: justify;
+}
+
+#regreso {
+    background-color: rgb(214, 181, 245);
+    width: 120px;
+    border-color: rgb(196, 155, 235);
+    border-radius: 5%;
+    text-align: center;
+    align-items: center; /* Asegura que el texto esté centrado dentro del botón */
+}
+
+.barra {
+    margin-top: 30px;
+    margin-bottom: -80px;
+}
+
+
+.barras{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.barras2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 800px){
+    
+
+    .barra {
+        margin-top: 30px;
+        margin-bottom: 300px;
+    }
+
+    .barraFel {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .barras{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    
+}
+
+#boton{
+    width: 200px;
+    height: 38px;
+    font-size: 18px;
+    font-weight: 500;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    border-radius: 10%;
+}
+
+#contBoton {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#boton {
+    background-color: rgb(214, 181, 245);
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    border-color: rgb(196, 155, 235);
+    border-radius: 5%;
+}
+
+#boton:active{
+    background-color: rgb(196, 155, 235);
+    border-color: rgb(178, 127, 226);
+}
+
+#botonExtra {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* Centra el botón */
+    align-items: center;     /* Asegura que el contenido esté centrado verticalmente */
+}
+
+.boton-extra-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Aseguramos que el contenedor ocupe todo el ancho disponible */
+    margin-top: 30px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+
+#botonCompletar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.boton-verificar {
+    background-color: rgb(214, 181, 245);
+    width: 120px;
+    border-color: rgb(196, 155, 235);
+    border-radius: 5%;
+    text-align: center;
+    align-items: center; /* Asegura que el texto esté centrado dentro del botón */
+
+}
+
+#botonExtra{
+    display: none;
+}
+
+#problema {
+    margin: 0 auto;
+    font-size: 24px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#problemaLOGIC {
+    margin: 0 auto;
+    font-size: 18px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#problemaLOGIC2 {
+    margin: 0 auto;
+    font-size: 18px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+#problema2 {
+    margin: 0 auto;
+    font-size: 24px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+@media (max-width: 800px) {
+    
+    #problema {
+        width: 350px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1100px) {
+    
+    #problema {
+        width: 500px;
+        font-size: 30px;
+    }
+
+    
+}
+
+#ex2{
+    display: none;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#ex3{
+    display: none;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#escuela{
+    margin-top: 10px;   
+}
+
+@media (min-width: 800px) and (max-width: 1100px) {
+    
+    #nextButton{
+        width: 200px;
+        height: 48px;
+        font-size: 18px;
+        font-weight: 500;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        border-radius: 10%;
+    }
+
+}
+
+#nextButton {
+    background-color: rgb(214, 181, 245);
+    width: 120px;
+    border-color: rgb(196, 155, 235);
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Asegura que el texto esté centrado dentro del botón */
+}
+
+#nextButton:disabled {
+    background-color: rgb(169, 155, 182);
+    border-color: rgb(119, 110, 128);
+    cursor: not-allowed;
+}
+
+#nextButton:active{
+    background-color: rgb(196, 155, 235);
+    border-color: rgb(178, 127, 226);
+}
+
+#nextButton a {
+    pointer-events: none; /* Asegura que el enlace no sea clickeable si el botón está deshabilitado */
+}
+
+#continueButton{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
