@@ -111,6 +111,7 @@
                 });
                 mensaje.classList.remove("incorrecto");
                 mensaje.classList.add("corr");
+                mensaje.style.color = "#60d460"; // Verde suave
 
                 botonExtra.style.display = "flex";
                 nextButton.style.display = "flex";
@@ -123,6 +124,7 @@
                 });
                 mensaje.classList.add("incorrecto");
                 mensaje.classList.remove("correcto");
+                mensaje.style.color = "#e67e22"; // Naranja suave
 
                 botonExtra.style.display = "none"; // Esconder el botón extra hasta que sea correcto
                 nextButton.disabled = true;
