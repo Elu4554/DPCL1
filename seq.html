@@ -146,6 +146,9 @@
             resultado.textContent = "¡Correcto! Has ordenado las frases en el orden adecuado.";
             resultado.classList.remove("incorrecto"); // Elimina la clase de error
             resultado.classList.add("BIEN"); // Añade la clase de éxito
+            resultado.style.color = "#60d460"; // Verde suave
+
+            
             sonidoCorrecto.play().catch(error => {
                     console.error("Error al reproducir el sonido correcto:", error);
                 });
@@ -157,7 +160,8 @@
         } else {
             resultado.textContent = "El orden no es correcto. Inténtalo de nuevo.";
             resultado.classList.remove("BIEN"); // Elimina la clase de éxito si existe
-            resultad.classList.add("incorrecto"); // Añade la clase de error
+            resultado.classList.add("incorrecto"); // Añade la clase de error
+            resultado.style.color = "#e67e22"; // Naranja suave
             sonidoError.play().catch(error => {
                     console.error("Error al reproducir el sonido correcto:", error);
                 });

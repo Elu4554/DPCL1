@@ -133,6 +133,8 @@
             
             mensaje.classList.remove("incorrecto"); // Elimina la clase de error
             mensaje.classList.add("BIEN"); // Añade la clase de éxito
+            mensaje.style.color = "#60d460"; // Verde suave
+            
 
             ex2.style.display = "flex";
             
@@ -148,7 +150,7 @@
             
             mensaje2.classList.remove("incorrecto"); // Elimina la clase de error
             mensaje2.classList.add("BIEN"); // Añade la clase de éxito
-
+            mensaje2.style.color = "#60d460"; // Verde suave
             
             
             botonExtra.style.display = "flex";
@@ -166,6 +168,7 @@
         
             mensaje2.classList.remove("BIEN"); // Elimina la clase de éxito si existe
             mensaje2.classList.add("incorrecto"); // Añade la clase de error
+            mensaje2.style.color = "#e67e22"; // Naranja suave
 
             botonExtra.style.display = "flex";
             nextButton.disabled = true;
@@ -180,6 +183,7 @@
         
             mensaje.classList.remove("BIEN"); // Elimina la clase de éxito si existe
             mensaje.classList.add("incorrecto"); // Añade la clase de error
+            mensaje.style.color = "#e67e22"; // Naranja suave
 
             botonExtra.style.display = "flex";
             nextButton.disabled = true;
