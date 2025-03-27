@@ -97,6 +97,14 @@
 
 @media (max-width: 800px){
     
+    #problema {
+        margin: 0 auto;
+        font-size: 24px;
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
 
     .barra {
         margin-top: 30px;
@@ -199,11 +207,10 @@
 #problema {
     margin: 0 auto;
     font-size: 24px;
-    margin-top: 25px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     text-align: center;
-
 }
 
 #problemaLOGIC {
@@ -240,6 +247,15 @@
 @media (max-width: 800px) {
     
     #problema {
+        margin: 0 auto;
+        font-size: 24px;
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #problema {
         width: 350px;
     }
 }
@@ -247,7 +263,9 @@
 @media (min-width: 800px) and (max-width: 1100px) {
     
     #problema {
-        width: 500px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 600px;
         font-size: 30px;
     }
 

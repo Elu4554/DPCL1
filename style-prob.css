@@ -138,6 +138,9 @@ ul li:last-child {
     height: auto;
     display: flex;
     justify-items: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     
 }
 
