@@ -100,6 +100,7 @@
                     console.error("Error al reproducir el sonido correcto:", error);
                 });
                 mensaje.classList.remove("incorrecto");
+                mensaje.style.color = "#60d460"; // Verde suave
     
                 botonExtra.style.display = "flex";
                 nextButton.style.display = "flex";
@@ -111,6 +112,7 @@
                     console.error("Error al reproducir el sonido correcto:", error);
                 });
                 mensaje.classList.add("incorrecto");
+                mensaje.style.color = "#e67e22"; // Naranja suave
     
                 botonExtra.style.display = "flex";
                 nextButton.disabled = true;
