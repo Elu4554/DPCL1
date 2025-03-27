@@ -91,8 +91,10 @@
                 div.style.display = "none";
             }
         });
+        let attempts = 0;
 
         function validar() {
+            
             const input = parseInt(document.getElementById("input").value, 10); // Convertir a número
             const mensaje = document.getElementById("mensaje");
             const botonExtra = document.getElementById("botonExtra");
@@ -100,31 +102,45 @@
             const nextLink = document.getElementById("nextLink");
             
             // Comprobar si el símbolo es el correcto
+            
             if (input === 1) {
-                mensaje.textContent = "¡Correcto!, el numero 15 tiene 1 decena.";
+                mensaje.textContent = "¡Correcto!, el número 15 tiene una decena.";
                 document.getElementById("sonidoCorrecto").play().catch(error => {
                     console.error("Error al reproducir el sonido correcto:", error);
                 });
                 mensaje.classList.remove("incorrecto");
                 mensaje.classList.add("corr");
+                mensaje.style.color = "#60d460"; // Verde suave
 
                 botonExtra.style.display = "flex";
                 nextButton.style.display = "flex";
                 nextButton.disabled = false;
                 nextLink.style.pointerEvents = "auto";
             } else {
-                mensaje.textContent = "Incorrecto, intenta de nuevo.";
+                attempts++; // Incrementamos attempts ANTES de evaluar las condiciones
+
+                if (attempts < 3) {
+                    mensaje.textContent = "Incorrecto, intenta de nuevo.";
+                } else {
+                    mensaje.textContent = "Al hablar de decenas, nos referimos a cantidades de 10, el segundo dígito de derecha a izquierda, en este caso el 1.";
+                }
+
                 document.getElementById("sonidoError").play().catch(error => {
                     console.error("Error al reproducir el sonido de error:", error);
                 });
-                mensaje.classList.add("incorrecto");
-                mensaje.classList.remove("correcto");
 
-                botonExtra.style.display = "none"; // Esconder el botón extra hasta que sea correcto
+                mensaje.classList.remove("BIEN"); // Elimina la clase de éxito si existe
+                mensaje.classList.add("incorrectojeje"); // Añade la clase de error
+                mensaje.style.color = "#e67e22"; // Naranja suave
+
+                botonExtra.style.display = "flex";
                 nextButton.disabled = true;
                 nextLink.style.pointerEvents = "none";
             }
+                        
+            
         }
+
 
 
 
