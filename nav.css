@@ -91,3 +91,17 @@ a {
     }
 
 }
+
+@media (min-width: 800px) and (max-width: 1100px) {
+
+    .textos {
+        font-size: 14px;
+        
+    }
+
+    .opciones {
+        width: 140px;
+        height: 190px;
+    }
+
+}

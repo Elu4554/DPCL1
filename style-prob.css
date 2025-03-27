@@ -1,4 +1,48 @@
 /* General Styles */
+@media (min-width: 800px) and (max-width: 1100px) {
+    .Cont {
+        width: 450px;
+    }
+
+    .titulo {
+        font-size: 22px;
+    }
+
+    .Text {
+        text-align: justify;
+        font-size: 20px;
+        margin: 30px auto;
+        height: auto;
+        max-width: 500px;
+    }
+
+    #problema {
+        width: 500px;
+        font-size: 30px;
+    }
+
+    #boton{
+        width: 200px;
+        height: 38px;
+        font-size: 18px;
+        font-weight: 500;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        border-radius: 10%;
+
+    }
+
+    footer{
+        margin-top: 300px;
+    }
+
+    #mensaje{
+        font-size: 20px;
+    }
+}
+
 h1 {
     display: flex;
     justify-content: center;
@@ -134,6 +178,8 @@ ul li:last-child {
         width: 350px;
     }
 }
+
+
 
 .imagen {
     display: flex;
@@ -292,6 +338,7 @@ ul li:last-child {
 }
 
 #mensaje2 {
+    text-align: center;
     display: flex;
     justify-content: center;
 }
