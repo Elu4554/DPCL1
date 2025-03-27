@@ -277,9 +277,18 @@ ul li:last-child {
     color: #e67e22;
 }
 
+#contMensaje{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+}
+
 #mensaje {
+    text-align: center;
     display: flex;
     justify-content: center;
+    justify-items: center;
 }
 
 #mensaje2 {
