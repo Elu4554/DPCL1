@@ -28,6 +28,18 @@
 </head>
 
 <body>
+
+    <div class="barras2">
+        <div class = "barras">
+            <img class = "barra" id="barra1"src="imagenes/barra 3-4.png" alt="barra 3-4" width="300px">
+        </div>
+    </div>
+
+    <div class="barras2">
+        <div class = "barras">
+            <img class = "barra barraHide" id="barra2" src="imagenes/barra 1.png" alt=" barra 1" width="300px" display="none">
+        </div>
+    </div>
     <div id = "op" class="op">
         <div class = "opciones">
             <ul class="opc">
@@ -43,7 +55,7 @@
 
     <div class="contBig">
 
-        <p class="pipi2">Encuentra todos los múltiplos de 6 y presiónalos.</p>
+        <p id="problema">Encuentra todos los múltiplos de 6 y presiónalos.</p>
 
 
         <div class="contenedor">
@@ -103,6 +115,8 @@
 
         function validar() {
             // Obtener el valor ingresado por el usuario
+            const barra1 = document.getElementById("barra1").value;
+            const barra2 = document.getElementById("barra2").value;
             const simbolo1 = document.getElementById("simbolo1").value;
             const simbolo2 = document.getElementById("simbolo2").value;
             const mensaje = document.getElementById("mensaje");
@@ -114,6 +128,9 @@
             if (simbolo1 === "/"  && simbolo2 === "+") {
                 mensaje.textContent = "¡Correcto! 12 / 4 + 3 = 6";
                 mensaje.classList.remove("incorrecto");
+                barra1.classList.add("barraHide");
+                barra2.classList.remove("barraHide");
+
     
                 botonExtra.style.display = "flex";
                 nextButton.style.display = "flex";
@@ -177,6 +194,8 @@
                 // Verificamos si se han encontrado los 4 múltiplos correctos
                 if (multiplosEncontrados === 4) {
                     botonExtra.style.display = 'block'; // Mostramos el botón extra
+                    barra1.classList.add('barraHide'); // Ocultamos la barra 1
+                    barra2.classList.remove('barraHide'); // Mostramos la barra 2
                 }
             }
         }

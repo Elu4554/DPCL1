@@ -28,6 +28,18 @@
 </head>
 
 <body>
+
+    <div class="barras2">
+        <div class = "barras">
+            <img class = "barra" id="barra1" src="imagenes/barra 1-4.png" alt="barra 1-4" width="300px">
+        </div>
+    </div>
+
+    <div class="barras2">
+        <div class = "barras">
+            <img class = "barra barraHide" id="barra2" src="imagenes/barra 1-2.png" alt=" barra 1-2" width="300px" display="none">
+        </div>
+    </div>
     <div id = "op" class="op">
         <div class = "opciones">
             <ul class="opc">
@@ -41,11 +53,8 @@
 
     </div>
 
+    
 
-    <div class="titulo">
-        <h1>Juego de Emparejar Botones</h1>
-
-    </div>
 
     <p id="problema">En la columna izquierda hay operaciones aritméticas, 
         en la columna derecha están las soluciones, 
@@ -96,7 +105,9 @@
     
     <script>
 
-const boton1 = document.getElementById('boton1');
+        const barra1 = document.getElementById('barra1');
+        const barra2 = document.getElementById('barra2');
+        const boton1 = document.getElementById('boton1');
         const boton2 = document.getElementById('boton2');
         const boton3 = document.getElementById('boton3');
         const boton4 = document.getElementById('boton4');
@@ -125,10 +136,13 @@ const boton1 = document.getElementById('boton1');
         function verificarNivel() {
             if (parejasEncontradas === parejasCorrectas.length) {
                 pasarNivel.style.display = 'block';
-                nextButton.style.display = "flex";
+                
+                barra1.classList.add("barraHide");
+                barra2.classList.remove("barraHide");
                 sonidoCorrecto.play().catch(error => {
                     console.error("Error al reproducir el sonido correcto:", error);
                 });
+                
             }
         }
 

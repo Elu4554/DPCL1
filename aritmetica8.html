@@ -37,7 +37,7 @@
 
     <div class="barras2">
         <div class = "barras">
-            <img class = "barra barraHide" id="barra2" src="imagenes/barra 1-3.png" alt="barra barra 1-3" width="300px" display="none">
+            <img class = "barra barraHide" id="barra2" src="imagenes/barra 1-3.png" alt=" barra 1-3" width="300px" display="none">
         </div>
     </div>
 
@@ -113,7 +113,19 @@
             }
         });
 
+
+/**
+ * Validates the user input for the number of units, tens, and hundreds in the number 315.
+ * If the input is correct, it displays a success message, plays a correct sound, 
+ * and enables navigation to the next challenge. If incorrect, it displays an error message, 
+ * plays an error sound, and keeps the navigation button disabled.
+ * Utilizes elements with IDs: input, input2, input3, mensaje, botonExtra, nextButton, nextLink.
+ */
+
         function validar() {
+
+            const barra1 = document.getElementById("barra1");
+            const barra2 = document.getElementById("barra2");
             const input = parseInt(document.getElementById("input").value, 10); // Convertir a número
             const input2 = parseInt(document.getElementById("input2").value, 10); // Convertir a número
             const input3 = parseInt(document.getElementById("input3").value, 10); // Convertir a número
@@ -131,6 +143,8 @@
                 mensaje.classList.remove("incorrecto");
                 mensaje.classList.add("corr");
                 mensaje.style.color = "#60d460"; // Verde suave
+                barra1.classList.add("barraHide");
+                barra2.classList.remove("barraHide");
 
                 botonExtra.style.display = "flex";
                 nextButton.style.display = "flex";

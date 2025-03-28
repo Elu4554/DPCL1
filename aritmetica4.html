@@ -29,6 +29,18 @@
 </head>
 
 <body>
+
+    <div class="barras2">
+        <div class = "barras">
+            <img class = "barra" id="barra1"src="imagenes/barra 0.png" alt="barra 0" width="300px">
+        </div>
+    </div>
+
+    <div class="barras2">
+        <div class = "barras">
+            <img class = "barra barraHide" id="barra2" src="imagenes/barra 1-4.png" alt=" barra 1-4" width="300px" display="none">
+        </div>
+    </div>
     <div id = "op" class="op">
         <div class = "opciones">
             <ul class="opc">
@@ -43,7 +55,7 @@
     </div>
 
 
-    <p id="problema">¿Cual de estos signos aritmeticos es el de la división?</p>
+    <p id="problema">¿Cual de estos signos aritméticos es el de la división?</p>
 
     <div class="arriba">
         <button class="contenido" id="boton1">
@@ -110,6 +122,8 @@
             }
         });
 
+        const barra1 = document.getElementById("barra1");
+        const barra2 = document.getElementById("barra2");
         const botonExtra = document.getElementById("botonExtra");
         const boton1 = document.getElementById('boton1');
         const boton2 = document.getElementById('boton2');
@@ -140,6 +154,8 @@
                 botonExtra.style.display = 'flex';
                 nextLink.style.pointerEvents = "auto";
                 nextButton.style.display = "flex";
+                barra1.classList.add("barraHide");
+                barra2.classList.remove("barraHide");
                 
 
                 // Reproducir sonido correcto si no está ya en reproducción
