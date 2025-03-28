@@ -72,6 +72,11 @@
             <p id="mensaje"></p> <!-- Agrega esta línea para mostrar los mensajes -->
 
         </div>
+
+        <img id="rene1"class="barraHide"src="imagenes/rene-gif.gif" alt="rene" width="200px">
+        <img id="rene2"class="barraHide"src="imagenes/pulp-feliz.png" alt="rene" width="200px">
+        <img id="rene3"src="imagenes/rene-feli.jpeg" alt="rene" width="200px">
+
         
 
         <div id="botonExtra" class="boton-extra-container">
@@ -115,6 +120,9 @@
 
         function validar() {
 
+            const rene1 = document.getElementById("rene1");
+            const rene2 = document.getElementById("rene2"); 
+            const rene3 = document.getElementById("rene3");
             const barra1 = document.getElementById("barra1");
             const barra2 = document.getElementById("barra2");
             const input = parseInt(document.getElementById("input").value, 10); // Convertir a número
@@ -136,6 +144,9 @@
                 mensaje.style.alignItems = "center";
                 barra1.classList.add("barraHide");
                 barra2.classList.remove("barraHide");
+                rene2.classList.remove("barraHide");
+                rene1.classList.add("barraHide");
+                rene3.classList.add("barraHide");
 
 
                 botonExtra.style.display = "flex";
@@ -158,6 +169,10 @@
                 mensaje.classList.remove("BIEN"); // Elimina la clase de éxito si existe
                 mensaje.classList.add("incorrectojeje"); // Añade la clase de error
                 mensaje.style.color = "#e67e22"; // Naranja suave
+                rene1.classList.remove("barraHide");
+                rene2.classList.add("barraHide");
+                rene3.classList.add("barraHide");
+
 
                 botonExtra.style.display = "flex";
                 nextButton.disabled = true;
