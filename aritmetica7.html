@@ -19,15 +19,25 @@
         <button id = "mas" class="mas"><img class = "menu" src="imagenes/ic--round-menu.png" alt="menu"></button>
         
     </nav>
+    <style>
+        .barraHide{
+            display: none;
+        }
+
+    </style>
 </head>
 
 <body>
     <div class="barras2">
         <div class = "barras">
-            <img class = "barra" src="imagenes/barra 2-3.png" alt="barra 1-2" width="300px">
-    
+            <img class = "barra" id="barra1" src="imagenes/barra 2-3.png" alt="barra 1-2" width="300px">   
         </div>
+    </div>
 
+    <div class="barras2">
+        <div class = "barras">
+            <img class = "barra barraHide" id="barra2" src="imagenes/barra 1.png" alt="barra 1" width="300px" display="none">
+        </div>
     </div>
     
 
@@ -97,6 +107,8 @@
 
         function validar() {
             
+            const barra1 = document.getElementById("barra1");
+            const barra2 = document.getElementById("barra2");
             const input = parseInt(document.getElementById("input").value, 10); // Convertir a número
             const mensaje = document.getElementById("mensaje");
             const botonExtra = document.getElementById("botonExtra");
@@ -113,6 +125,8 @@
                 mensaje.classList.remove("incorrecto");
                 mensaje.classList.add("corr");
                 mensaje.style.color = "#60d460"; // Verde suave
+                barra1.classList.add("barraHide");
+                barra2.classList.remove("barraHide");
 
 
                 botonExtra.style.display = "flex";
