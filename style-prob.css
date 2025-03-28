@@ -27,6 +27,10 @@
     }
 }
 
+#espacio{
+    margin-bottom: 200px;
+}
+
 h1 {
     display: flex;
     justify-content: center;
@@ -161,7 +165,9 @@ ul li:last-child {
         max-width: 400px;
     }
 
-
+    #espacio{
+        margin-bottom: 200px;
+    }
 }
 
 
