@@ -430,11 +430,12 @@ footer {
 
     
     #contenedor{
-        margin-top: 40px;
+        margin-top: 0px;
     }
 
     #feliz{
-        margin-top: 50px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 }
 
