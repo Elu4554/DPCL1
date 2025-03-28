@@ -6,6 +6,7 @@
     <title>Ordenar la Secuencia</title>
     <link rel="stylesheet" href="seq.css">
     <link rel="stylesheet" href="style-prob2.css">
+    <link rel="stylesheet" href="style-prob.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="nav.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,6 +46,17 @@
     </style>
 </head>
 <body>
+    <div class="barras2">
+        <div class = "barras">
+            <img class = "barra" id="barra1"src="imagenes/barra 1-2.png" alt="barra 1-2" width="300px">
+        </div>
+    </div>
+
+    <div class="barras2">
+        <div class = "barras">
+            <img class = "barra barraHide" id="barra2" src="imagenes/barra 1.png" alt=" barra 1" width="300px" display="none">
+        </div>
+    </div>
 
     <div id = "op" class="op">
         <div class = "opciones">
@@ -61,7 +73,10 @@
 
 <div class="column">
     <div class="container">
-        <h2>Ordena las frases para que tengan sentido:</h2>
+        <div class="Cont">
+            <p id = "problema">Ordena las frases para que tengan sentido:</p>
+        </div>
+        
         <div class="select-container">
             <label for="select1">Paso 1:</label>
             <select id="select1">
@@ -102,7 +117,7 @@
                 <option value="d">d) El perro saltó para atrapar la pelota.</option>
             </select>
         </div>
-        <button class="button" onclick="verificarOrden()">Verificar</button>
+        <button class="button" id = "boton" onclick="verificarOrden()">Verificar</button>
         <p id="resultado"></p>
     </div>
 
@@ -130,6 +145,8 @@
 
 <script>
     // Orden correcto
+    const barra1 = document.getElementById("barra1");
+    const barra2 = document.getElementById("barra2");
     const ordenCorrecto = ["c", "a", "d", "b"];
 
     function verificarOrden() {
@@ -151,6 +168,9 @@
             resultado.classList.remove("incorrecto"); // Elimina la clase de error
             resultado.classList.add("BIEN"); // Añade la clase de éxito
             resultado.style.color = "#60d460"; // Verde suave
+
+            barra1.classList.add("barraHide");
+            barra2.classList.remove("barraHide");
 
             
             sonidoCorrecto.play().catch(error => {

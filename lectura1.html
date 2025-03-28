@@ -27,6 +27,17 @@
 </head>
 
 <body>
+    <div class="barras2">
+        <div class = "barras">
+            <img class = "barra" id="barra1"src="imagenes/barra 0.png" alt="barra 0" width="300px">
+        </div>
+    </div>
+
+    <div class="barras2">
+        <div class = "barras">
+            <img class = "barra barraHide" id="barra2" src="imagenes/barra 1-2.png" alt=" barra 1-2" width="300px" display="none">
+        </div>
+    </div>
     <div id = "op" class="op">
         <div class = "opciones">
             <ul class="opc">
@@ -112,6 +123,16 @@
             }
         });
 
+        const barra1 = document.getElementById("barra1");
+        const barra2 = document.getElementById("barra2");
+        const sonidoError = document.getElementById("sonidoError"); 
+        const sonidoCorrecto = document.getElementById("sonidoCorrecto");
+        const mensaje = document.getElementById("mensaje");
+        const mensaje2 = document.getElementById("mensaje2");    
+        const botonExtra = document.getElementById("botonExtra");
+        const nextButton = document.getElementById("nextButton");
+        const nextLink = document.getElementById("nextLink");
+
         function pasar(){
             const ex2 = document.getElementById("ex2");
             mensaje.textContent = "¡Correcto! El titulo del texto es, Toño.";
@@ -122,9 +143,10 @@
             mensaje.classList.remove("incorrecto"); // Elimina la clase de error
             mensaje.classList.add("BIEN"); // Añade la clase de éxito
             mensaje.style.color = "#60d460"; // Verde suave
-            
 
+            
             ex2.style.display = "flex";
+            nextButton.style.display = "none";
             
             
         }
@@ -139,6 +161,9 @@
             mensaje2.classList.remove("incorrecto"); // Elimina la clase de error
             mensaje2.classList.add("BIEN"); // Añade la clase de éxito
             mensaje2.style.color = "#60d460"; // Verde suave
+
+            barra1.classList.add("barraHide");
+            barra2.classList.remove("barraHide");
 
             
             
@@ -161,6 +186,7 @@
 
             botonExtra.style.display = "flex";
             nextButton.disabled = true;
+            nextButton.style.display = "none";
             nextLink.style.pointerEvents = "none";
         }
 
@@ -176,6 +202,7 @@
 
             botonExtra.style.display = "flex";
             nextButton.disabled = true;
+            nextButton.style.display = "none";
             nextLink.style.pointerEvents = "none";
         }
 

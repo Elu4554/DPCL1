@@ -27,6 +27,18 @@
 </head>
 
 <body>
+
+    <div class="barras2">
+        <div class = "barras">
+            <img class = "barra" id="barra1"src="imagenes/barra 2-3.png" alt="barra 2-3" width="300px">
+        </div>
+    </div>
+
+    <div class="barras2">
+        <div class = "barras">
+            <img class = "barra barraHide" id="barra2" src="imagenes/barra 1.png" alt=" barra 1" width="300px" display="none">
+        </div>
+    </div>
     <div id = "op" class="op">
         <div class = "opciones">
             <ul class="opc">
@@ -114,6 +126,9 @@
     </audio>
     
     <script>
+
+        const barra1 = document.getElementById("barra1");
+        const barra2 = document.getElementById("barra2");
         document.getElementById("mas").addEventListener("click", function() {
             var div = document.getElementById("op");
             if (div.style.display === "none" || div.style.display === "") {
@@ -148,6 +163,9 @@
             mensaje2.classList.remove("incorrecto"); // Elimina la clase de error
             mensaje2.classList.add("BIEN"); // Añade la clase de éxito
             mensaje2.style.color = "#60d460"; // Verde suave
+            barra1.classList.add("barraHide");
+            barra2.classList.remove("barraHide");
+            
 
             
             
@@ -170,6 +188,7 @@
 
             botonExtra.style.display = "flex";
             nextButton.disabled = true;
+            nextButton.style.display = "none";
             nextLink.style.pointerEvents = "none";
         }
 
