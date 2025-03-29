@@ -140,8 +140,10 @@
     border-radius: 10%;
 }
 
+
+
 #contBoton {
-    margin-top: 30px;
+    margin-top: -5px;
     display: flex;
     justify-content: center;
 }
@@ -205,7 +207,39 @@
     display: none;
 }
 
+
+.pixel {
+    top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Para que los elementos internos usen este como referencia */
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita que la imagen sobresalga */
+}
+
+
+.pixel img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    position: absolute; /* Posiciona la imagen detrás */
+    top: 80px;
+    left: 0;
+    width: 400px;
+    object-fit: cover; /* Asegura que cubra el div sin deformarse */
+    z-index: -1; /* Envía la imagen al fondo */
+}
+
+
+
 #problema {
+    width: 350px;
     color: white;
     margin: 0 auto;
     font-size: 24px;
@@ -248,10 +282,29 @@
 
 @media (max-width: 800px) {
     
+    img.barra{
+        margin: 20px;
+    }
+
+    .entrada{
+        margin-top: -20px;
+        z-index: 1000;
+    }
+
+    
+
+    .pixel{
+        margin-top: -20px;
+    }
+
+    .pixel img {
+        margin-top: -30px;
+    }
+
     #problema {
         margin: 0 auto;
         font-size: 24px;
-        margin-top: 25px;
+        margin-top: -15px;
         display: flex;
         justify-content: center;
         text-align: center;
@@ -259,6 +312,14 @@
 
     #problema {
         width: 350px;
+    }
+
+    .pixel{
+        top: 0px;
+    }
+
+    .pixel img {
+        top: 50px;
     }
 }
 
@@ -296,6 +357,12 @@
 
 @media (min-width: 800px) and (max-width: 1100px) {
     
+    
+
+    #contBoton{
+        margin-top: 0px;
+    }
+
     #nextButton{
         width: 200px;
         height: 48px;
@@ -339,3 +406,28 @@
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
+#contMensaje{
+    z-index: 999;
+    height: auto;
+    margin-top: 15px;
+    margin-left: 180px;
+    margin-bottom: -110px;
+    
+    
+}
+
+#globo{
+    margin-left: 60px;
+}
+
+#mensaje{
+    margin-top: 20px;
+    margin-left: -215px;
+    z-index: 1000;
+    width: 200px;
+}
+
+
+
+

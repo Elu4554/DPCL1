@@ -22,6 +22,11 @@
     <style>
         .barraHide{
             display: none;
+            
+        }
+
+        #contMensaje2{
+            margin-top: 60px;
         }
 
     </style>
@@ -55,6 +60,7 @@
     </div>
 
     <div class="Cont">
+        
         <p id="problema">¿Cuántas unidades tiene el numero "15"?</p>
 
         <div class="centro">
@@ -63,27 +69,30 @@
         </div>
 
         <div id= "contBoton">
-
             <button onclick="validar()" id= "boton" >Comprobar</button>
-
         </div>
-
-        <div id="contMensaje">
-            <p id="mensaje"></p> <!-- Agrega esta línea para mostrar los mensajes -->
-
-        </div>
-
-        <img id="rene1"class="barraHide"src="imagenes/rene-pulpo.gif" alt="rene" width="200px">
-        <img id="rene2"class="barraHide"src="imagenes/Pulpartes-D (1).png" alt="rene" width="200px">
-        <img id="rene3"src="imagenes/pulpartes-jiji.png" alt="rene" width="200px">
-
-        
 
         <div id="botonExtra" class="boton-extra-container">
             <button id="nextButton" disabled>
                 <a id="nextLink" href="aritmetica6.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
             </button>
         </div>
+
+        <div id="contMensaje">
+            <img id = "globo" class="barraHide"src="imagenes/globo de texto1.png" alt="globo de texto" width="230px">
+            <p id="mensaje"></p> <!-- Agrega esta línea para mostrar los mensajes -->
+
+        </div>
+
+        <div id="contMensaje2"></div>
+
+        <img id="rene1"class="barraHide"src="imagenes/rene-pulpo.gif" alt="rene" width="300px">
+        <img id="rene2"class="barraHide"src="imagenes/Pulpartes-D (1).png" alt="rene" width="300px">
+        <img id="rene3"src="imagenes/pulpartes-jiji.png" alt="rene" width="300px">
+
+        
+
+        
 
         <div id="espacio">
             
@@ -120,6 +129,8 @@
 
         function validar() {
 
+            const contMensaje2 = document.getElementById("contMensaje2");
+            const globo = document.getElementById("globo"); 
             const rene1 = document.getElementById("rene1");
             const rene2 = document.getElementById("rene2"); 
             const rene3 = document.getElementById("rene3");
@@ -138,15 +149,17 @@
                 document.getElementById("sonidoCorrecto").play().catch(error => {
                     console.error("Error al reproducir el sonido correcto:", error);
                 });
-                mensaje.classList.remove("incorrecto");
-                mensaje.classList.add("corr");
-                mensaje.style.color = "#60d460"; // Verde suave
+               
                 mensaje.style.alignItems = "center";
+                mensaje.style.marginTop = "-15px";
                 barra1.classList.add("barraHide");
                 barra2.classList.remove("barraHide");
                 rene2.classList.remove("barraHide");
+                rene2.style.marginTop = "-60px";
                 rene1.classList.add("barraHide");
                 rene3.classList.add("barraHide");
+                globo.classList.remove("barraHide");
+                contMensaje2.classList.remove("barraHide"); // Agregamos la class
 
 
                 botonExtra.style.display = "flex";
@@ -159,19 +172,22 @@
                 if (attempts < 3) {
                     mensaje.textContent = "Incorrecto, intenta de nuevo.";
                 } else {
-                    mensaje.textContent = "Recuerda que al hablar de unidades, nos referimos al último dígito a la derecha, en este caso serían 5 unidades.";
+                    mensaje.textContent = "Al hablar de unidades, nos referimos al último dígito a la derecha, en este caso 5.";
+                    mensaje.style.fontSize = "14px";
+                    mensaje.style.marginTop = "13px";
                 }
 
                 document.getElementById("sonidoError").play().catch(error => {
                     console.error("Error al reproducir el sonido de error:", error);
                 });
 
-                mensaje.classList.remove("BIEN"); // Elimina la clase de éxito si existe
-                mensaje.classList.add("incorrectojeje"); // Añade la clase de error
-                mensaje.style.color = "#e67e22"; // Naranja suave
+                
                 rene1.classList.remove("barraHide");
                 rene2.classList.add("barraHide");
                 rene3.classList.add("barraHide");
+                barra1.classList.remove("barraHide");
+                globo.classList.remove("barraHide");
+                contMensaje2.classList.add("barraHide");
 
 
                 botonExtra.style.display = "flex";

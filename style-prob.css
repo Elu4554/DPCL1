@@ -23,7 +23,9 @@
     
 
     #mensaje{
-        font-size: 20px;
+        font-size: 16px;
+        color: black;
+        width: 210px;
     }
 }
 
@@ -216,6 +218,7 @@ ul li:last-child {
 }
 
 #contMensaje{
+    color: black;
     display: flex;
     text-align: center;
     justify-content: center;
