@@ -405,31 +405,5 @@
     margin-bottom: 20px;
 }
 
-#contMensaje{
-    z-index: 999;
-    height: auto;
-    margin-top: 40px;
-    margin-left: 140px;
-    margin-bottom: -110px;
-    
-    
-}
 
-#globo{
-    margin-left: 40px;
-    margin-top: -40px;
-}
-
-#mensaje{
-    font-size: 14px;
-    margin-top: -25px;
-    margin-left: -170px;
-    z-index: 1000;
-    width: 160px;
-}
-
-
-button{
-    z-index: 1000;
-}
 
