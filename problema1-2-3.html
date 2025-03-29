@@ -160,16 +160,16 @@
             sonidoError.play().catch(error => {
                     console.error("Error al reproducir el sonido correcto:", error);
                 });
-                rene1.classList.remove("barraHide");
-                rene2.classList.add("barraHide");
-                rene3.classList.add("barraHide");
-                barra1.classList.remove("barraHide");
-                globo.classList.remove("barraHide");
-                contMensaje2.classList.add("barraHide");
-                botonExtra.style.display = "flex";
-                nextButton.disabled = true;
-                nextLink.style.pointerEvents = "none";
-                nextButton.style.display = "none";
+            rene1.classList.remove("barraHide");
+            rene2.classList.add("barraHide");
+            rene3.classList.add("barraHide");
+            barra1.classList.remove("barraHide");
+            globo.classList.remove("barraHide");
+            contMensaje2.classList.add("barraHide");
+            botonExtra.style.display = "flex";
+            nextButton.disabled = true;
+            nextLink.style.pointerEvents = "none";
+            nextButton.style.display = "none";
         });
 
         // Agregar evento al botón No
@@ -179,20 +179,20 @@
             sonidoCorrecto.play().catch(error => {
                     console.error("Error al reproducir el sonido correcto:", error);
                 });
-                mensaje.style.alignItems = "center";
-                mensaje.style.marginTop = "-50px";
-                barra1.classList.add("barraHide");
-                barra2.classList.remove("barraHide");
-                rene2.classList.remove("barraHide");
-                rene2.style.marginTop = "-60px";
-                rene1.classList.add("barraHide");
-                rene3.classList.add("barraHide");
-                globo.classList.remove("barraHide");
-                contMensaje2.classList.remove("barraHide"); // Agregamos la class
-                botonExtra.style.display = "flex";
-                nextButton.style.display = "flex";
-                nextButton.disabled = false;
-                nextLink.style.pointerEvents = "auto";
+            mensaje.style.alignItems = "center";
+            mensaje.style.marginTop = "-50px";
+            barra1.classList.add("barraHide");
+            barra2.classList.remove("barraHide");
+            rene2.classList.remove("barraHide");
+            rene2.style.marginTop = "-60px";
+            rene1.classList.add("barraHide");
+            rene3.classList.add("barraHide");
+            globo.classList.remove("barraHide");
+            contMensaje2.classList.remove("barraHide"); // Agregamos la class
+            botonExtra.style.display = "flex";
+            nextButton.style.display = "flex";
+            nextButton.disabled = false;
+            nextLink.style.pointerEvents = "auto";
             
             
             // Desbloquear el botón "Next"
