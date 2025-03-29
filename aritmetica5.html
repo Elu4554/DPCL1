@@ -79,7 +79,7 @@
         </div>
 
         <div id="contMensaje">
-            <img id = "globo" class="barraHide"src="imagenes/globo de texto1.png" alt="globo de texto" width="230px">
+            <img id = "globo" class="barraHide"src="imagenes/globo de texto1.png" alt="globo de texto" width="180px">
             <p id="mensaje"></p> <!-- Agrega esta línea para mostrar los mensajes -->
 
         </div>
@@ -151,7 +151,7 @@
                 });
                
                 mensaje.style.alignItems = "center";
-                mensaje.style.marginTop = "-15px";
+                mensaje.style.marginTop = "-50px";
                 barra1.classList.add("barraHide");
                 barra2.classList.remove("barraHide");
                 rene2.classList.remove("barraHide");
@@ -172,9 +172,8 @@
                 if (attempts < 3) {
                     mensaje.textContent = "Incorrecto, intenta de nuevo.";
                 } else {
-                    mensaje.textContent = "Al hablar de unidades, nos referimos al último dígito a la derecha, en este caso 5.";
-                    mensaje.style.fontSize = "14px";
-                    mensaje.style.marginTop = "13px";
+                    mensaje.textContent = "Las unidades son el último dígito, en este caso 5.";
+                    mensaje.style.fontSize = "13px";
                 }
 
                 document.getElementById("sonidoError").play().catch(error => {

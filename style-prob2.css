@@ -289,9 +289,7 @@
     .entrada{
         margin-top: -20px;
         z-index: 1000;
-    }
-
-    
+    } 
 
     .pixel{
         margin-top: -20px;
@@ -410,8 +408,8 @@
 #contMensaje{
     z-index: 999;
     height: auto;
-    margin-top: 15px;
-    margin-left: 180px;
+    margin-top: 40px;
+    margin-left: 140px;
     margin-bottom: -110px;
     
     
@@ -419,15 +417,19 @@
 
 #globo{
     margin-left: 60px;
+    margin-top: -40px;
 }
 
 #mensaje{
-    margin-top: 20px;
-    margin-left: -215px;
+    font-size: 14px;
+    margin-top: -25px;
+    margin-left: -170px;
     z-index: 1000;
-    width: 200px;
+    width: 160px;
 }
 
 
-
+button{
+    z-index: 1000;
+}
 
