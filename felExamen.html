@@ -69,10 +69,10 @@
         let nota = localStorage.getItem("examen");
 
         if (nota >= 4) {
-            document.getElementById("feliz").textContent = "Felicitaciones, has aprobado el examen";
+            document.getElementById("feliz").textContent = "Felicitaciones, has aprobado el examen con ${nota} de 6 puntos";
             
         } else {
-            document.getElementById("feliz").textContent = "Lo siento, has suspendido el examen";
+            document.getElementById("feliz").textContent = "Lo siento, has suspendido el examen con ${nota} de 6 puntos";
         }
 
         document.getElementById("mas").addEventListener("click", function() {
