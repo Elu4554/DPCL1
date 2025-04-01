@@ -22,6 +22,12 @@
         <button id = "mas" class="mas"><img class = "menu" src="imagenes/ic--round-menu.png" alt="menu"></button>
         
     </nav>
+    <style>
+        .barraHide{
+            display: none;
+            
+        }
+    </style>
 </head>
 
 <body>
@@ -60,18 +66,23 @@
             </button>
         </div>
 
-        <img id="rene3"src="imagenes/pulpartes-estrella.png" alt="rene" width="300px">
-
+        <img class = "barraHide" id="rene3"src="imagenes/pulpartes-triste.png" alt="rene" width="300px">
+        <img id="rene4"src="imagenes/pulpartes-estrella.png" alt="rene" width="300px">
 
     </div>
 
     <script>
+        const rene3 = document.getElementById("rene3");
+        const rene4 = document.getElementById("rene4");
         let nota = parseFloat(localStorage.getItem("examen"));
         if (nota >= 4) {
             document.getElementById("feliz").textContent = `Felicitaciones, has aprobado el examen con ${nota} de 6 puntos`;
-            
+            rene3.classList.add("barraHide");
+            rene4.classList.remove("barraHide");
         } else {
             document.getElementById("feliz").textContent = `Lo siento, has suspendido el examen con ${nota} de 6 puntos`;
+            rene3.classList.remove("barraHide");
+            rene4.classList.add("barraHide");
         }
 
         document.getElementById("mas").addEventListener("click", function() {
