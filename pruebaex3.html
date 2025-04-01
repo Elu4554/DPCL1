@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="nextButton">
+        Sumar
+    </button>
+    
+</body>
+
+<script>
+    document.getElementById("nextButton").addEventListener("click", function() {
+        // Obtener el valor actual de localStorage, convertirlo a número o empezar en 0
+        let valorActual = localStorage.getItem("examen") ? parseInt(localStorage.getItem("examen")) : 0;
+        
+        // Sumar 1
+        let nuevoValor = valorActual + 1;
+        
+        // Guardar el nuevo valor en localStorage
+        localStorage.setItem("examen", nuevoValor);
+    });
+    
+</script>
+</html>

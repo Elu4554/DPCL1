@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen matemático 1</title>
+    <link rel="stylesheet" href="style-prob.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style-prob2.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="juego.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="imagenes/Icono DPCL (1).png" type="image/x-icon">
+    <nav> 
+        <h1 class = "logo"><a href="index.html"><img class = "imgDPCL" src="imagenes/Icono DPCL (1).png" alt="DPCL"></a></h1>
+        
+        <button id = "mas" class="mas"><img class = "menu" src="imagenes/ic--round-menu.png" alt="menu"></button>
+        
+    </nav>
+    <style>
+        .barraHide{
+            display: none;
+            
+        }
+
+        #contMensaje2{
+            margin-top: 60px;
+        }
+
+        #contMensaje{
+            z-index: 999;
+            height: auto;
+            margin-top: 40px;
+            margin-left: 140px;
+            margin-bottom: -110px;
+            
+            
+        }
+
+        #globo{
+            margin-left: 40px;
+            margin-top: -40px;
+        }
+
+        #mensaje{
+            font-size: 14px;
+            margin-top: -25px;
+            margin-left: -170px;
+            z-index: 1000;
+            width: 160px;
+        }
+
+
+        button{
+            z-index: 1000;
+        }
+
+        @media (min-width: 800px) and (max-width: 1100px) {
+            #contBoton{
+                margin-top: 0px;
+            }
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="barras2">
+        <div class = "barras">
+            <img class = "barra" id="barra1"src="imagenes/barra 0.png" alt="barra 0" width="300px">
+        </div>
+    </div>
+
+    <div class="barras2">
+        <div class = "barras">
+            <img class = "barra barraHide" id="barra2" src="imagenes/barra 1-3.png" alt="barra barra 1-3" width="300px" display="none">
+        </div>
+    </div>
+    
+
+    <div id = "op" class="op">
+        <div class = "opciones">
+            <ul class="opc">
+                <li><a class="textos" href="index.html">Inicio</a></li>
+                <li><a class="textos" href="actividades.html">Actividades</a></li>
+                <li><a class="textos" href="info.html">Info</a></li>
+                <li><a class="textos" href="comentarios.html">Comentarios</a></li>
+                
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="Cont">
+        
+        <p id="problema">¿Cuántas unidades tiene el número "19"?</p>
+
+        <div class="centro">
+            <input type="number" id="input" class="entrada">
+
+        </div>
+
+        <div id= "contBoton">
+            <button onclick="validar()" id= "boton" >Comprobar</button>
+        </div>
+
+        <div id="botonExtra2" class="boton-extra-container">
+            <button id="nextButton2" disabled>
+                <a id="nextLink2" href="examen1-2.html" style="text-decoration: none; color: black;">Siguiente Desafío 2</a>
+            </button>
+        </div>
+
+        <div id="botonExtra" class="boton-extra-container">
+            <button id="nextButton" disabled>
+                <a id="nextLink" href="examen1-2.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
+            </button>
+        </div>
+
+        <div id="contMensaje">
+            <img id = "globo" class="barraHide"src="imagenes/globo de texto1.png" alt="globo de texto" width="180px">
+            <p id="mensaje"></p> <!-- Agrega esta línea para mostrar los mensajes -->
+
+        </div>
+
+        <div id="contMensaje2"></div>
+
+        <img id="rene1"class="barraHide"src="imagenes/rene-pulpo.gif" alt="rene" width="300px">
+        <img id="rene2"class="barraHide"src="imagenes/Pulpartes-D (1).png" alt="rene" width="300px">
+        <img id="rene3"src="imagenes/pulpartes-jiji.png" alt="rene" width="300px">
+
+        <div id="espacio">
+            
+        </div>
+        
+    </div>
+    
+
+    <audio id="sonidoError" preload="auto">
+        <source src="incorrecto.wav" type="audio/mpeg">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
+
+    <audio id="sonidoCorrecto" preload="auto">
+        <source src="correcto.wav" type="audio/wav">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
+
+    
+    <script>
+        
+
+        document.getElementById("mas").addEventListener("click", function() {
+            var div = document.getElementById("op");
+            if (div.style.display === "none" || div.style.display === "") {
+                div.style.display = "flex";
+            } else {
+                div.style.display = "none";
+            }
+        });
+
+        let attempts = 0;
+
+        function validar() {
+
+            const botonId = document.getElementById("boton");
+
+            const contMensaje2 = document.getElementById("contMensaje2");
+            const globo = document.getElementById("globo"); 
+            const rene1 = document.getElementById("rene1");
+            const rene2 = document.getElementById("rene2"); 
+            const rene3 = document.getElementById("rene3");
+            const barra1 = document.getElementById("barra1");
+            const barra2 = document.getElementById("barra2");
+            const input = parseInt(document.getElementById("input").value, 10); // Convertir a número
+            const inputElement = document.getElementById("input");
+            const mensaje = document.getElementById("mensaje");
+            const botonExtra = document.getElementById("botonExtra");
+            const nextButton = document.getElementById("nextButton");
+            const nextLink = document.getElementById("nextLink");
+            const botonExtra2 = document.getElementById("botonExtra2");
+            const nextButton2 = document.getElementById("nextButton2");
+            const nextLink2 = document.getElementById("nextLink2");
+            
+            // Comprobar si el símbolo es el correcto
+            
+            if (input === 9) {
+                mensaje.textContent = "¡Correcto!, el número 19 tiene 9 unidades.";
+                document.getElementById("sonidoCorrecto").play().catch(error => {
+                    console.error("Error al reproducir el sonido correcto:", error);
+                });
+               
+                mensaje.style.alignItems = "center";
+                mensaje.style.marginTop = "-50px";
+                barra1.classList.add("barraHide");
+                barra2.classList.remove("barraHide");
+                rene2.classList.remove("barraHide");
+                rene2.style.marginTop = "-60px";
+                rene1.classList.add("barraHide");
+                rene3.classList.add("barraHide");
+                globo.classList.remove("barraHide");
+                contMensaje2.classList.remove("barraHide"); // Agregamos la class
+
+
+                botonExtra.style.display = "flex";
+                nextButton.style.display = "flex";
+                nextButton.disabled = false;
+                nextLink.style.pointerEvents = "auto";
+                inputElement.style.pointerEvents = "none";
+                inputElement.readOnly = true;
+                inputElement.disabled = true;
+                botonId.style.display = "none";
+            } else {
+                mensaje.textContent = "¡Incorrecto! Respuesta correcta: 9";
+                document.getElementById("sonidoError").play().catch(error => {
+                    console.error("Error al reproducir el sonido de error:", error);
+                });
+                rene1.classList.remove("barraHide");
+                rene2.classList.add("barraHide");
+                rene3.classList.add("barraHide");
+                globo.classList.remove("barraHide");
+                contMensaje2.classList.add("barraHide");
+                
+                nextLink2.disabled = false;
+                inputElement.style.pointerEvents = "none";
+                inputElement.readOnly = true;
+                inputElement.disabled = true;
+                botonId.style.display = "none";
+                
+                botonExtra2.style.display = "flex";
+                nextButton2.style.display = "flex";
+                nextButton2.disabled = false;
+                nextLink2.style.pointerEvents = "auto";
+                botonExtra.style.display = "flex";
+                nextButton.disabled = true;
+                nextLink.style.pointerEvents = "none";
+                nextButton.style.display = "none";
+            }
+        }
+
+        if (!localStorage.getItem('examen')) {
+            localStorage.setItem('examen', 0);
+        }
+
+        // Evento para el botón que suma 30, pero solo una vez
+        document.getElementById("nextButton").addEventListener("click", function() {
+            // Obtener el valor actual de localStorage, convertirlo a número o empezar en 0
+            let valorActual = localStorage.getItem("examen") ? parseInt(localStorage.getItem("examen")) : 0;
+            
+            // Sumar 1
+            let nuevoValor = valorActual + 1;
+            
+            // Guardar el nuevo valor en localStorage
+            localStorage.setItem("examen", nuevoValor);
+        });
+
+
+    </script>
+
+</body>
+<footer>
+
+    <div class="info">
+        <h2>DPCL</h2>
+        <p>Contactanos en:</p>
+        
+        
+    </div>
+
+    <div class="contactos">
+        <a class= "Enlace"href="mailto:contactodpcl@gmail.com"> 
+            <img class="imgEmail" src="imagenes/Vector-Email-Icon-Transparent.png" alt="email">
+        </a>
+        
+        <a  href="https://www.instagram.com/dpcl_web/?utm_source=ig_web_button_share_sheet">
+            <img class = "IG" src="imagenes/instagram_white_28dp.png" alt="IG">
+        </a>
+
+    </div>
+    
+    
+</footer>
+</html>
