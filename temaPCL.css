@@ -30,11 +30,17 @@ body{
     
 }
 
+@media (prefers-color-scheme: light) {
+    .t {
+        color: black;
+    }
+}
+
 .t {
     font-weight: bold;
     font-size: 32px;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 img{
@@ -246,6 +252,10 @@ footer {
     }
 
     .info{
+        color: white;
+    }
+
+    .t {
         color: white;
     }
 
