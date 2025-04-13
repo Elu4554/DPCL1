@@ -1,33 +1,4 @@
 /* General Styles */
-@media (min-width: 800px) and (max-width: 1100px) {
-    .Cont {
-        width: 450px;
-    }
-
-    .titulo {
-        font-size: 22px;
-    }
-
-    .Text {
-        text-align: justify;
-        font-size: 20px;
-        margin: 30px auto;
-        height: auto;
-        max-width: 500px;
-    }
-
-    
-    #espacio{
-        margin-bottom: 200px;
-    }
-    
-
-    #mensaje{
-        font-size: 14px;
-        color: black;
-        width: 210px;
-    }
-}
 
 #espacio{
     margin-bottom: 200px;
