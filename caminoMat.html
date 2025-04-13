@@ -53,7 +53,7 @@
         <img class="imagen3" src="imagenes/tdesign--mathematics-filled.png" alt="Geometria" width="200">
     </div>
 
-    <h1>Aritmetica Etapa 1: </h1>
+    <h1>Aritmética Etapa 1: </h1>
 
     <ul id="botones">
 
@@ -63,13 +63,21 @@
         <li><a href="aritmetica3.html"><button class = "niveles" id = "nivel4" disabled>4</button></a></li>
     </ul>
 
-    <h1>Aritmetica Etapa 2: </h1>
+    <h1>Aritmética Etapa 2: </h1>
 
     <ul id="botones">
         
         <li><a href="aritmetica1.html"><button class = "niveles" id = "nivel5" disabled>5</button></a></li>
         <li><a href="aritmetica4.html"><button class = "niveles" id = "nivel6" disabled>6</button></a></li>
-        <li><button class = "niveles" id = "nivel7" disabled>7</button></li>
+        
+    </ul>
+
+    <h1>Aritmética Etapa 3: </h1>
+
+    <ul id="botones">
+        <li><a href="fracc1.html"><button class = "niveles" id = "nivel7" disabled>7</button></a></li>
+
+        <li><button class = "niveles" id = "nivel8" disabled>8</button></li>
         
         <li><button class = "niveles" id="borrarStorage">R</button></li>
 
@@ -162,6 +170,10 @@
 
         if (localStorage.getItem("nivel6Completado")) {
             document.getElementById("nivel7").disabled = false; // Habilita el botón del nivel 1
+        }
+
+        if (localStorage.getItem("nivel7Completado")) {
+            document.getElementById("nivel8").disabled = false; // Habilita el botón del nivel 1
         }
 
         
