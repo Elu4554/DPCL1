@@ -63,8 +63,8 @@
 
         .carta{
             align-items: center;
-            width: 300px;
-            height: 400px;
+            width: 390px;
+            height: 360px;
             background-color: #f5f5f5;
             border-radius: 20px;
             display: flex;
@@ -89,24 +89,17 @@
 
         #inputFracc{
             border-radius: 10px;
-            width: 100px;
-            height: 100px;
-            font-size: 70px;
-        }
-
-        #inputFracc3{
-            border-radius: 10px;
-            width: 100px;
-            height: 100px;
-            font-size: 70px;
+            width: 70px;
+            height: 70px;
+            font-size: 50px;
         }
 
         #inputFracc2{
             border-radius: 10px;
-            width: 100px;
-            height: 100px;
-            font-size: 70px;
-            margin-right: 20px;
+            width: 70px;
+            height: 70px;
+            font-size: 50px;
+            
         }
 
         #boton{
@@ -125,7 +118,7 @@
 
     <div class="barras2">
         <div class = "barras">
-            <img class = "barra barraHide" id="barra2" src="imagenes/barra 1-2.png" alt=" barra 1-2" width="300px" display="none">
+            <img class = "barra barraHide" id="barra2" src="imagenes/barra 1-3.png" alt=" barra 1-3" width="300px" display="none">
         </div>
     </div>
     <div id = "op" class="op">
@@ -144,18 +137,32 @@
 
     <div class = "Cont" >
         <p id = "problema">
-            ¿Cómo reducirías la fracción 12/10?
+            ¿Cuál es el resultado de la siguiente división de fracciones?
         </p>
 
         <div class="centro">
             <div class="carta">
-                
                 <div class="carta2">
-                    <input type="number" id="inputFracc" width="100px">
-                    <button class="noFondo"><img src="imagenes/resta.png" alt="resta" width="100px"></button>
-                    <input type="number" id="inputFracc3" width="100px">
+                    <button class="noFondo"><img src="imagenes/ri--number-3.png" alt="3" width="70px"></button>
+                    <button class="noFondo"><img src="imagenes/resta.png" alt="resta" width="70px"></button>
+                    <button class="noFondo"><img src="imagenes/ri--number-9.png" alt="9" width="70px"></button>
                 </div>
-                
+                <div class="carta3">
+                    <img src="imagenes/pepicons-pop--division.png" alt="suma" width="70px">
+                </div>
+                <div class="carta2">
+                    <button class="noFondo"><img src="imagenes/ri--number-3.png" alt="3" width="70px"></button>
+                    <button class="noFondo"><img src="imagenes/resta.png" alt="resta" width="70px"></button>
+                    <button class="noFondo"><img src="imagenes/ri--number-7.png" alt="7" width="70px"></button>
+                </div>
+                <div class="carta3">
+                    <img src="imagenes/ri--equal-fill.png" alt="suma" width="70px">
+                </div>
+                <div class="carta2">
+                    <input type="number" id="inputFracc" width="50px">
+                    <button class="noFondo"><img src="imagenes/resta.png" alt="resta" width="70px"></button>
+                    <input type="number" id="inputFracc2" width="50px">                
+                </div>
             </div>
 
             <button id = "boton" onclick="comprobar()">Comprobar</button>
@@ -166,7 +173,7 @@
 
         <div id="botonExtra" class="boton-extra-container">
             <button id="nextButton" disabled>
-                <a id="nextLink" href="fel13.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
+                <a id="nextLink" href="fracc21.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
             </button>
         </div>
 
@@ -228,10 +235,12 @@
 
         function comprobar() {
             const input = document.getElementById("inputFracc").value;
-            const input2 = document.getElementById("inputFracc3").value;
-            const correcto = "6";
-            const correcto2 = "5";
-            if (input === correcto) {
+            const input2 = document.getElementById("inputFracc2").value;
+            
+            const correcto = "21";
+            const correcto2 = "27";
+            
+            if (input === correcto && input2 === correcto2) {
                 mensaje.textContent = "¡Correcto!";
                 sonidoCorrecto.play().catch(error => {
                 console.error("Error al reproducir el sonido correcto:", error);

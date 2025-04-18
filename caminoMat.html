@@ -77,18 +77,31 @@
 
     <ul id="botones">
         <li><a href="fracc1.html"><button class = "niveles" id = "nivel9" disabled>9</button></a></li>
-        <li><a href="fracc3.html"><button class = "niveles" id = "nivel10" disabled>10</button></a></li>
-        <li><a href="fracc9.html"><button class = "niveles" id = "nivel11" disabled>11</button></a></li>
-        <li><a href="fracc7.html"><button class = "niveles" id = "nivel12" disabled>12</button></a></li>
+        <li><a href="fracc23.html"><button class = "niveles" id = "nivel10" disabled>10</button></a></li>
+        <li><a href="fracc25.html"><button class = "niveles" id = "nivel11" disabled>11</button></a></li>
+        <li><a href="fracc3.html"><button class = "niveles" id = "nivel12" disabled>12</button></a></li>
+        <li><a href="fracc9.html"><button class = "niveles" id = "nivel13" disabled>13</button></a></li>
+        <li><a href="fracc7.html"><button class = "niveles" id = "nivel14" disabled>14</button></a></li>
         
 
     </ul>
 
-    <h1>Aritmética Etapa 3: </h1>
+    <h1>Aritmética Etapa 4: </h1>
 
     <ul id="botones">
         
-        <li><button class = "niveles" id = "nivel13" disabled>13</button></li>
+        <li><a href="fracc11.html"><button class = "niveles" id = "nivel15" disabled>15</button></a></li>
+        <li><a href="fracc14.html"><button class = "niveles" id = "nivel16" disabled>16</button></a></li>
+        <li><a href="fracc17.html"><button class = "niveles" id = "nivel17" disabled>17</button></a></li>
+        <li><a href="fracc20.html"><button class = "niveles" id = "nivel18" disabled>18</button></a></li>
+
+    </ul>
+
+    <h1>Aritmética Etapa 5: </h1>
+
+    <ul id="botones">
+        
+        <li><button class = "niveles" id = "nivel17" disabled>19</button></li>
         
         <li><button class = "niveles" id="borrarStorage">R</button></li>
 
@@ -199,6 +212,38 @@
             document.getElementById("nivel11").disabled = false; // Habilita el botón del nivel 1
         }   
 
+        if (localStorage.getItem("nivel11Completado")) {
+            document.getElementById("nivel12").disabled = false; // Habilita el botón del nivel 1
+        }
+
+        if (localStorage.getItem("nivel12Completado")) {
+            document.getElementById("nivel13").disabled = false; // Habilita el botón del nivel 1
+        }
+
+        if (localStorage.getItem("nivel13Completado")) {
+            document.getElementById("nivel14").disabled = false; // Habilita el botón del nivel 1
+        }
+
+        if (localStorage.getItem("nivel14Completado")) {
+            document.getElementById("nivel15").disabled = false; // Habilita el botón del nivel 1
+        }
+
+        if (localStorage.getItem("nivel15Completado")) {
+            document.getElementById("nivel16").disabled = false; // Habilita el botón del nivel 1
+        }
+
+        if (localStorage.getItem("nivel16Completado")) {
+            document.getElementById("nivel17").disabled = false; // Habilita el botón del nivel 1
+        }
+
+        if (localStorage.getItem("nivel17Completado")) {
+            document.getElementById("nivel18").disabled = false; // Habilita el botón del nivel 1
+        }
+
+        if (localStorage.getItem("nivel18Completado")) {
+            document.getElementById("nivel19").disabled = false; // Habilita el botón del nivel 1
+        }
+        
 
     </script>
 </body>

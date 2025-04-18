@@ -119,13 +119,13 @@
 
     <div class="barras2">
         <div class = "barras">
-            <img class = "barra" id="barra1"src="imagenes/barra 0.png" alt="barra 0" width="300px">
+            <img class = "barra" id="barra1"src="imagenes/barra 1-2.png" alt="barra 1-2" width="300px">
         </div>
     </div>
 
     <div class="barras2">
         <div class = "barras">
-            <img class = "barra barraHide" id="barra2" src="imagenes/barra 1-2.png" alt=" barra 1-2" width="300px" display="none">
+            <img class = "barra barraHide" id="barra2" src="imagenes/barra 1.png" alt=" barra 1" width="300px" display="none">
         </div>
     </div>
     <div id = "op" class="op">
@@ -144,7 +144,7 @@
 
     <div class = "Cont" >
         <p id = "problema">
-            ¿Cómo reducirías la fracción 12/10?
+            ¿Cómo representarías la expresión "cinco novenos" en lenguaje matemático?
         </p>
 
         <div class="centro">
@@ -166,7 +166,7 @@
 
         <div id="botonExtra" class="boton-extra-container">
             <button id="nextButton" disabled>
-                <a id="nextLink" href="fel13.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
+                <a id="nextLink" href="fel10.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
             </button>
         </div>
 
@@ -229,8 +229,8 @@
         function comprobar() {
             const input = document.getElementById("inputFracc").value;
             const input2 = document.getElementById("inputFracc3").value;
-            const correcto = "6";
-            const correcto2 = "5";
+            const correcto = "5";
+            const correcto2 = "9";
             if (input === correcto) {
                 mensaje.textContent = "¡Correcto!";
                 sonidoCorrecto.play().catch(error => {

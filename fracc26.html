@@ -63,8 +63,8 @@
 
         .carta{
             align-items: center;
-            width: 300px;
-            height: 400px;
+            width: 390px;
+            height: 360px;
             background-color: #f5f5f5;
             border-radius: 20px;
             display: flex;
@@ -89,23 +89,41 @@
 
         #inputFracc{
             border-radius: 10px;
-            width: 100px;
-            height: 100px;
-            font-size: 70px;
-        }
-
-        #inputFracc3{
-            border-radius: 10px;
-            width: 100px;
-            height: 100px;
-            font-size: 70px;
+            width: 70px;
+            height: 70px;
+            font-size: 50px;
         }
 
         #inputFracc2{
             border-radius: 10px;
-            width: 100px;
-            height: 100px;
-            font-size: 70px;
+            width: 70px;
+            height: 70px;
+            font-size: 50px;
+            
+        }
+
+        #inputFracc3{
+            border-radius: 10px;
+            width: 70px;
+            height: 70px;
+            font-size: 50px;
+            
+        }
+
+        #inputFracc4{
+            border-radius: 10px;
+            width: 70px;
+            height: 70px;
+            font-size: 50px;
+            
+        }
+
+        #operacion{
+            border-radius: 10px;
+            width: 70px;
+            height: 70px;
+            font-size: 30px;
+            margin-left: 20px;
             margin-right: 20px;
         }
 
@@ -119,7 +137,7 @@
 
     <div class="barras2">
         <div class = "barras">
-            <img class = "barra" id="barra1"src="imagenes/barra 0.png" alt="barra 0" width="300px">
+            <img class = "barra" id="barra1"src="imagenes/barra 1-4.png" alt="barra 1-4" width="300px">
         </div>
     </div>
 
@@ -144,17 +162,33 @@
 
     <div class = "Cont" >
         <p id = "problema">
-            ¿Cómo reducirías la fracción 12/10?
+            ¿Cómo representarías la expresión "siete octavos menos seis décimos" en lenguaje matemático?
         </p>
 
         <div class="centro">
             <div class="carta">
-                
                 <div class="carta2">
-                    <input type="number" id="inputFracc" width="100px">
-                    <button class="noFondo"><img src="imagenes/resta.png" alt="resta" width="100px"></button>
-                    <input type="number" id="inputFracc3" width="100px">
+                    <input type="number" id="inputFracc">
+                    <button class="noFondo"><img src="imagenes/resta.png" alt="resta" width="70px"></button>
+                    <input type="number" id="inputFracc2">
                 </div>
+                <div class="carta3">
+                    <input type="text" list="operaciones" id="operacion">
+
+                    <datalist id="operaciones">
+                        <option value="+">
+                        <option value="-">
+                        <option value="x">
+                        <option value="÷">
+
+                    </datalist>
+                </div>
+                <div class="carta2">
+                    <input type="number" id="inputFracc3"> 
+                    <button class="noFondo"><img src="imagenes/resta.png" alt="resta" width="70px"></button>
+                    <input type="number" id="inputFracc4">
+                </div>
+                
                 
             </div>
 
@@ -166,7 +200,7 @@
 
         <div id="botonExtra" class="boton-extra-container">
             <button id="nextButton" disabled>
-                <a id="nextLink" href="fel13.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
+                <a id="nextLink" href="fracc27.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
             </button>
         </div>
 
@@ -228,10 +262,17 @@
 
         function comprobar() {
             const input = document.getElementById("inputFracc").value;
-            const input2 = document.getElementById("inputFracc3").value;
-            const correcto = "6";
-            const correcto2 = "5";
-            if (input === correcto) {
+            const input2 = document.getElementById("inputFracc2").value;
+            const input3 = document.getElementById("inputFracc3").value;
+            const input4 = document.getElementById("inputFracc4").value;
+            const operacion = document.getElementById("operacion").value;
+            
+            const correcto = "7";
+            const correcto2 = "8";
+            const correcto3 = "6";
+            const correcto4 = "10";
+            
+            if (input === correcto && input2 === correcto2 && input3 === correcto3 && input4 === correcto4 && operacion === "-") {
                 mensaje.textContent = "¡Correcto!";
                 sonidoCorrecto.play().catch(error => {
                 console.error("Error al reproducir el sonido correcto:", error);
