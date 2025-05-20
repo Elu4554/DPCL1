@@ -22,6 +22,46 @@
             display: none;
         }
 
+        #contMensaje2{
+            margin-top: 60px;
+        }
+
+        #contMensaje{
+            z-index: 999;
+            height: auto;
+            margin-top: 40px;
+            margin-left: 140px;
+            margin-bottom: -110px;
+            
+            
+        }
+
+        #globo{
+            margin-left: 40px;
+            margin-top: -40px;
+        }
+
+        #mensaje{
+            font-size: 14px;
+            margin-top: -25px;
+            margin-left: -170px;
+            z-index: 1000;
+            width: 160px;
+        }
+
+
+        button{
+            z-index: 1000;
+        }
+
+        @media (min-width: 800px) and (max-width: 1100px) {
+            #contBoton{
+                margin-top: 0px;
+            }
+
+        }
+
+
     </style>
 </head>
 
@@ -53,7 +93,7 @@
 
     <div class = "Cont" >
         <p id = "problema">
-            Toma en cuenta el enunciado y escoge cual de las opciones pertenece a la conclusión. 
+            Toma en cuenta el enunciado y escoge cual es la conclusión. 
             “Todas las escuelas tienen salones de clases, mi escuela es un lugar donde los niños y 
             niñas van a aprender, mi escuela tiene salones de clases, si hay un lugar con salones 
             de clases, podría ser una escuela”
@@ -71,14 +111,25 @@
             <button id="boton3pipi" onclick="naonao()">Mi escuela tiene salones de clases </button>
         </div>
 
-        <p id="mensaje" class="resultado"></p>
+        
 
         <div id="botonExtra" class="boton-extra-container">
             <button id="nextButton" disabled>
                 <a id="nextLink" href="logica11.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
             </button>
         </div>
-        
+
+        <div id="contMensaje">
+            <img id = "globo" class="barraHide"src="imagenes/globo de texto1.png" alt="globo de texto" width="180px">
+            <p id="mensaje"></p> <!-- Agrega esta línea para mostrar los mensajes -->
+
+        </div>
+
+        <div id="contMensaje2"></div>
+
+        <img id="rene1"class="barraHide"src="imagenes/rene-pulpo.gif" alt="rene" width="300px">
+        <img id="rene2"class="barraHide"src="imagenes/Pulpartes-D (1).png" alt="rene" width="300px">
+        <img id="rene3"src="imagenes/pulpartes-jiji.png" alt="rene" width="300px">
 
     </div>
 
@@ -104,23 +155,37 @@
             }
         });
 
+        const botonExtra = document.getElementById("botonExtra");
+        const nextButton = document.getElementById("nextButton");
+        const nextLink = document.getElementById("nextLink");
+        const mensaje = document.getElementById("mensaje");
+        const sonidoError = document.getElementById("sonidoError");
+        const sonidoCorrecto = document.getElementById("sonidoCorrecto");
+        const globo = document.getElementById("globo");
+        const rene1 = document.getElementById("rene1");
+        const rene2 = document.getElementById("rene2");
+        const rene3 = document.getElementById("rene3");
+        const contMensaje = document.getElementById("contMensaje");
+        const contMensaje2 = document.getElementById("contMensaje2");
+        
         const barra1 = document.getElementById("barra1");
         const barra2 = document.getElementById("barra2");
 
         function pasar(){
-            mensaje.textContent = "¡Correcto! La conclusion del argumento es si hay un lugar con salones de clases, podría ser una escuela";
+            mensaje.textContent = "¡Correcto! Muy bien.";
             sonidoCorrecto.play().catch(error => {
                 console.error("Error al reproducir el sonido correcto:", error);
             });
-            
-            mensaje.classList.remove("incorrecto"); // Elimina la clase de error
-            mensaje.classList.add("BIEN"); // Añade la clase de éxito
-            mensaje.style.color = "#60d460"; // Verde suave
-
+            mensaje.style.alignItems = "center";
+            mensaje.style.marginTop = "-50px";
             barra1.classList.add("barraHide");
             barra2.classList.remove("barraHide");
-            
-            
+            rene2.classList.remove("barraHide");
+            rene2.style.marginTop = "-60px";
+            rene1.classList.add("barraHide");
+            rene3.classList.add("barraHide");
+            globo.classList.remove("barraHide");
+            contMensaje2.classList.remove("barraHide"); // Agregamos la class
             botonExtra.style.display = "flex";
             nextButton.style.display = "flex";
             nextButton.disabled = false;
@@ -133,14 +198,15 @@
                 console.error("Error al reproducir el sonido incorrecto:", error);
             });
         
-            mensaje.classList.remove("BIEN"); // Elimina la clase de éxito si existe
-            mensaje.classList.add("incorrecto"); // Añade la clase de error
-            mensaje.style.color = "#e67e22"; // Naranja suave
-
+            rene1.classList.remove("barraHide");
+            rene2.classList.add("barraHide");
+            rene3.classList.add("barraHide");
+            globo.classList.remove("barraHide");
+            contMensaje2.classList.add("barraHide");
             botonExtra.style.display = "flex";
             nextButton.disabled = true;
-            nextButton.style.display = "none";
             nextLink.style.pointerEvents = "none";
+            nextButton.style.display = "none";
         }
 
         
