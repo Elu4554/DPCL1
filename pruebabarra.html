@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Barra inferior</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #eccdee; /* Fondo claro morado */
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      height: 40px;
+      width: 100%;
+      background-color: #b081db; /* Morado oscuro */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .bottom-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bottom-nav a .icon {
+      margin-bottom: 5px;
+    }
+
+    .select{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #b081db;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contenido de la página -->
+  <div style="padding-bottom: 70px; text-align: center; margin-top: 50px;">
+    <h1>Mi página</h1>
+    <p>Aquí irá el contenido principal de la página...</p>
+  </div>
+
+  <!-- Barra de navegación inferior -->
+  <nav class="bottom-nav">
+    <a href="#acerca">
+      <img src="imagenes/mdi--about-circle-outline.png" alt="" width="50px">
+      
+    </a>
+    <a href="#actividades">
+      <img src="imagenes/heroicons--puzzle-piece-20-solid.png" alt="" width="50px">
+      
+    </a>
+    <a href="#inicio" class="select">
+      <img src="imagenes/pulpartes-jiji.png" alt="" width="80px">
+      
+    </a>
+    <a href="#info">
+      <img src="imagenes/mdi--book-open-variant.png" alt="" width="50px">
+      
+    </a>
+    <a href="#comentarios">
+      <img src="imagenes/lsicon--comments-filled.png" alt="" width="50px">
+      
+    </a>
+  </nav>
+
+</body>
+</html>
