@@ -127,7 +127,7 @@ img.ayuda{
 
 }
 
-nav {
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -243,7 +243,7 @@ footer {
         color: white;
     }
 
-    nav {
+    .nav {
         background-color: #17111d;
     }
 
