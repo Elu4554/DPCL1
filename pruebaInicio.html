@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: black;
+        }
+
+        a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="sumar()">1</button>
+    <button onclick="sumar2()">2</button>
+    <button onclick="sumar3()">3</button>
+    <button onclick="sumar4()">4</button>
+    <button onclick="sumar5()">5</button>
+
+    
+    <p id="mensaje"></p> 
+    <a href="" id="link"></a>
+    
+</body>
+<script>
+    function sumar(){
+        localStorage.setItem("nivel1", "true");
+    }
+
+    function sumar2(){
+        localStorage.setItem("nivel2", "true");
+    }
+
+    function sumar3(){
+        localStorage.setItem("nivel3", "true");
+    }
+
+    function sumar4(){
+        localStorage.setItem("nivel4", "true");
+    }
+
+    function sumar5(){
+        localStorage.setItem("nivel5", "true");
+    }
+
+    if (localStorage.getItem("nivel1") === "true") {
+        document.getElementById("mensaje").innerHTML = "Continua con el siguiente nivel de matemáticas:";
+        document.getElementById("link").innerHTML = "Aquí";
+        document.getElementById("link").href = "aritmetica8.html";
+    }
+    if (localStorage.getItem("nivel2") === "true") {
+        document.getElementById("mensaje").innerHTML = "Nivel 2 Completado, continua al nivel 3:";
+        document.getElementById("link").innerHTML = "Aquí";
+        document.getElementById("link").href = "arit1.html";
+    }
+
+    if (localStorage.getItem("nivel3") === "true") {
+        document.getElementById("mensaje").innerHTML = "Nivel 3 Completado, continua al nivel 4";
+        document.getElementById("link").innerHTML = "Aquí";
+        document.getElementById("link").href = "aritmetica8.html";
+    }
+
+    if (localStorage.getItem("nivel4") === "true") {
+        document.getElementById("mensaje").innerHTML = "Nivel 4 Completado, continua al nivel 5";
+        document.getElementById("link").innerHTML = "Aquí";
+        document.getElementById("link").href = "aritmetica8.html";
+    }
+
+    if (localStorage.getItem("nivel5") === "true") {
+        document.getElementById("mensaje").innerHTML = "Nivel 5 Completado, continua al nivel 6";
+        document.getElementById("link").innerHTML = "Aquí";
+        document.getElementById("link").href = "aritmetica8.html";
+    }
+</script>
+</html>

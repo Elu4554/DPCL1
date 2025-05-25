@@ -29,7 +29,7 @@ button {
     display: none; /* Ocultar los resultados al principio */
 }
 
-nav {
+.nav {
     
     display: flex;
     align-items: center;
@@ -145,7 +145,7 @@ footer {
         color: white;
     }
 
-    nav {
+    .nav {
         background-color: #17111d;
     }
 
