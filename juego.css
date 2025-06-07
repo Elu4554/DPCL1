@@ -1,3 +1,8 @@
+.bottom-nav {
+    z-index: 9999;
+}
+
+
 body{
     background-color: #ebccee;
     font-family: "Heebo", sans-serif;

@@ -1,4 +1,9 @@
+
 /* General Styles */
+
+.bottom-nav {
+    z-index: 9999;
+}
 
 #espacio{
     margin-bottom: 200px;

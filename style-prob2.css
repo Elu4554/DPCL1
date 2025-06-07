@@ -1,3 +1,8 @@
+.bottom-nav {
+    z-index: 9999;
+}
+
+
 .pipi {
     background-color: rgb(214, 181, 245);
     display: flex;

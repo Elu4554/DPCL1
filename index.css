@@ -1,3 +1,8 @@
+.bottom-nav {
+    z-index: 9999;
+}
+
+
 body {
     flex-direction: column;
     background-color: #ebccee;
@@ -78,7 +83,7 @@ ul li:last-child {
 }
 
 .Titulo {
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     font-weight: bold;
     font-size: 22px;

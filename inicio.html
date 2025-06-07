@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="a7RDEO0Ae0fP-ODwmVEL5RvTzuUgPKzc2JmSoBQgvMA" />
-    <title>DPCL</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Actividades</title>
+    <link rel="stylesheet" href="style-prob.css">
     <link rel="stylesheet" href="style-prob2.css">
+    <link rel="stylesheet" href="juego.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
@@ -23,16 +25,15 @@
         <div class="trofeo">
             <img id = "trofeo" src="imagenes/line-md--calendar.png" alt="racha">
             <span id="contadorRacha">0</span>
-
         </div>
         
         
     </nav>
     <style>
-        .Cont{
-            width: 75%;
-            justify-content: center;
-            text-align: justify;
+        @media(prefers-color-scheme: dark){
+            .imagenes{
+                color: white;
+            }
         }
 
         .bottom-nav {
@@ -68,6 +69,12 @@
         background-color: #b081db;
     }
 
+    .select img{
+        width: 70px;
+        margin-top: 5px;
+        margin-right: 7px;
+    }
+
     .icono{
         width: 80px;
     }
@@ -76,37 +83,31 @@
         width: 50px;
     }
 
+    .pulp img{
+        width: 70px;
+    }
+
     .select img{
-        width: 100px;
-        margin-top: -5px;
+        width: 65px;
     }
 
     @media(prefers-color-scheme: dark){
-      .bottom-nav{
-        background-color: #17111d;
-      }
+            .imagenes{
+                color: white;
+            }
 
-      .select{
-        background-color: #17111d;
-      }
+            .bottom-nav{
+                background-color: #17111d;
+            }
 
-      body{
-        background-color: #312531;
-      }
-    }
-
-    .imagen{
-        margin-bottom: 70px;
-    }
-
-    
-
+            .select{
+                background-color: #17111d;
+            }
+        }
     </style>
 </head>
 
 <body>
-
-    
     <div id = "op" class="op">
         <div class = "opciones">
             <ul class="opc">
@@ -120,39 +121,28 @@
 
     </div>
 
-    <div class = "Cont" >
-        <div>
-            <p  class= "Titulo" >¿Qué es DPCL?</p>
-            <p class="Text">DPCL (Desarrollo del Pensamiento Crítico y Lógico) es un proyecto enfocado a la mejora del análisis de problemas, la lógica y el pensamiento crítico en niños y niñas de nivel básico, 
-                mediante ejercicios que estimulan la mente de los niños y niñas, con puzzles y acompañamientos visuales. 
-                Se incluyen temas de estudio para hacer más fácil el aprendizaje.
-
-                </p>
-
-            <p class="Text">
-                Para nosotros, la educación de los pequeños es importante, ese es el porqué de este proyecto, 
-                queremos que todos los niños y niñas tengan a su disposición una herramienta de aprendizaje fácil de utilizar y divertida, 
-                una herramienta que los motive a seguir aprendiendo mientra se divierten, una herramienta que les ayude a razonar los problemas que se presenten y 
-                no solo responder de una forma mecánica sin reflexionar el “porqué” de tal respuesta.
-
-            </p>
+    <section>
+        <h1>Actividades</h1>
 
 
-        </div>
-        <a  href="index.html"><img class= "imagen" src="imagenes/mdi--thinking.png" alt="mente"></a>
+    </section>
+    <div class="Actividades">
+        <a class = "imagenes" href="caminologica.html"><img src="imagenes/mdi--head-thinking.png" alt="logica" width="100" height="100">Niveles lógicos<br></a>
+        <a class = "imagenes" href="caminoMat.html"><img src="imagenes/mat.png" alt="aritmetica" width="100" height="100">Niveles Matemáticos <br></a>
+        <a class = "imagenes" href="caminolectura.html"><img src="imagenes/tabler--book.png" alt="lectura" width="100" height="100">Niveles lectura<br></a>
     </div>
 
     <nav class="bottom-nav">
-        <a href="Acerca.html" class="icono">
+        <a href="" class="icono">
           <img src="imagenes/mdi--about-circle-outline.png" alt="" >
           
         </a>
-        <a href="actividades.html" class=" icono">
+        <a href="actividades.html" class="select icono">
           <img src="imagenes/heroicons--puzzle-piece-20-solid.png" alt="" >
           
         </a>
-        <a href="index.html" class="select icono pulp">
-          <img src="imagenes/pulpartes-D.png" alt="" >
+        <a href="index.html" class="icono pulp">
+          <img src="imagenes/pulpartes-jiji.png" alt="" >
           
         </a>
         <a href="info.html" class="icono">
@@ -165,8 +155,8 @@
         </a>
       </nav>
     
+    
     <script>
-
         
 
         // Inicializamos el valor de localStorage si no existe
@@ -204,10 +194,8 @@
 
         // Ejecutar la función al cargar la página
         window.onload = actualizarRacha;
-
     </script>
-    
-
 </body>
+
 
 </html>
