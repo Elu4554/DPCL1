@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nivel lógico 1</title>
+    <title>Nivel lectura 1</title>
     <link rel="stylesheet" href="style-prob.css">
     <link rel="stylesheet" href="style-prob2.css">
     <link rel="stylesheet" href="index.css">
@@ -14,49 +14,6 @@
     <link rel="icon" href="imagenes/Icono DPCL (1).png" type="image/x-icon">
     
     <style>
-        .barraHide{
-            display: none;
-        }
-
-        #contMensaje2{
-            margin-top: 60px;
-        }
-
-        #contMensaje{
-            z-index: 999;
-            height: auto;
-            margin-top: 40px;
-            margin-left: 140px;
-            margin-bottom: -110px;
-            
-            
-        }
-
-        #globo{
-            margin-left: 40px;
-            margin-top: -40px;
-        }
-
-        #mensaje{
-            font-size: 14px;
-            margin-top: -25px;
-            margin-left: -170px;
-            z-index: 1000;
-            width: 160px;
-        }
-
-
-        button{
-            z-index: 1000;
-        }
-
-        @media (min-width: 800px) and (max-width: 1100px) {
-            #contBoton{
-                margin-top: 0px;
-            }
-
-        }
-
         .bottom-nav {
       position: fixed;
       bottom: 0;
@@ -129,20 +86,67 @@
         .foquito{
             margin-bottom: 90px;
         }
+
+        .barraHide{
+            display: none;
+        }
+
+        #contBoton{
+            margin-top: 20px;
+        }
+
+        #contMensaje2{
+            margin-top: 60px;
+        }
+
+        #contMensaje{
+            z-index: 999;
+            height: auto;
+            margin-top: 40px;
+            margin-left: 140px;
+            margin-bottom: -110px;
+            
+            
+        }
+
+        #globo{
+            margin-left: 40px;
+            margin-top: -40px;
+        }
+
+        #mensaje{
+            font-size: 14px;
+            margin-top: -25px;
+            margin-left: -170px;
+            z-index: 1000;
+            width: 160px;
+        }
+
+
+        button{
+            z-index: 1000;
+        }
+
+        @media (min-width: 800px) and (max-width: 1100px) {
+            #contBoton{
+                margin-top: 0px;
+            }
+
+        }
+
     </style>
 </head>
 
 <body>
-
     <div class="barras2">
         <div class = "barras">
-            <img class = "barra" id="barra1"src="imagenes/barra 0.png" alt="barra 0" width="300px">
+            <img class = "barra" id="barra1"src="imagenes/barra 2-3.png" alt="barra 2-3" width="300px">
         </div>
     </div>
 
     <div class="barras2">
         <div class = "barras">
-            <img class = "barra barraHide" id="barra2" src="imagenes/barra 1-2.png" alt=" barra 1-2" width="300px" display="none">
+            <img class = "barra barraHide" id="barra2" src="imagenes/barra 1.png" alt=" barra 1" width="300px" display="none">
         </div>
     </div>
     <div id = "op" class="op">
@@ -161,20 +165,42 @@
 
     <div class = "Cont" >
         <p id = "problema">
-            Pulpartes dejó un pastel de chocolate en la mesa, pero ¡Ya no está!. Ayuda 
-            a Pulpartes a saber quien se comió su pastel, usando como pista el siguiente texto. "Julio no estaba en 
-            casa, Damian tiene chocolate en la cara y Carla no come chocolate"
+            Pulpartes quiere hacer una limonada, pero no sabe el orden de los pasos para hacerla. Ayuda a
+            Pulpartes enumerando los pasos.
+            
         </p>
 
-        <div class="centro">
-            <button id="boton1pipi" onclick="pasar()">Damian</button>
-            <button id="boton1pipi" onclick="naonao()">Julio</button>
-            <button id="boton1pipi" onclick="naonao()">Carla</button>
-        </div>
+        <ul id = "problemapipi">
+            <div id="pipis">
+                <li><input list="opciones" type="text" id="simbolo1" size="1">Exprimir</li>
+                <li><input list="opciones" type="text" id="simbolo2" size="1">Servir</li>
+                <li><input list="opciones" type="text" id="simbolo3" size="1">Tomar</li>
+                <li><input list="opciones" type="text" id="simbolo4" size="1">Endulzar</li>
+                <li><input list="opciones" type="text" id="simbolo5" size="1">Cortar limones</li>
 
+            </div>
+            
+
+        </ul>
+
+        <datalist id="opciones">
+            <option value="1">
+            <option value="2">
+            <option value="3">
+            <option value="4">
+            <option value="5">
+        </datalist>
+
+       
+
+        <div id= "contBoton">
+
+            <button onclick="validar()" id= "boton" >Comprobar</button>
+
+        </div>
         <div id="botonExtra" class="boton-extra-container">
             <button id="nextButton" disabled>
-                <a id="nextLink" href="FelLec8.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
+                <a id="nextLink" href="FelLec10.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
             </button>
         </div>
 
@@ -194,6 +220,7 @@
         
 
     </div>
+
     <div id="espacio"></div>
 
     <nav class="bottom-nav">
@@ -232,27 +259,34 @@
     <script>
         
 
-        const mensaje = document.getElementById("mensaje");
-        const sonidoError = document.getElementById("sonidoError");
-        const sonidoCorrecto = document.getElementById("sonidoCorrecto");
-        const botonExtra = document.getElementById("botonExtra");
-        const nextLink = document.getElementById("nextLink");
-        const contMensaje = document.getElementById("contMensaje");
-        const contMensaje2 = document.getElementById("contMensaje2");
-        const globo = document.getElementById("globo");
-        const rene1 = document.getElementById("rene1");
-        const rene2 = document.getElementById("rene2");
-        const rene3 = document.getElementById("rene3");
-        const barra1 = document.getElementById("barra1");
-        const barra2 = document.getElementById("barra2");
-        const nextButton = document.getElementById("nextButton");
-
-        function pasar(){
-            mensaje.textContent = "¡Correcto! Damian se comió el pastel";
-            sonidoCorrecto.play().catch(error => {
-                console.error("Error al reproducir el sonido correcto:", error);
-            });
-            mensaje.style.alignItems = "center";
+        function validar() {
+            // Obtener el valor ingresado por el usuario
+            const input = document.getElementById("simbolo1").value;
+            const globo = document.getElementById("globo"); 
+            const rene1 = document.getElementById("rene1");
+            const rene2 = document.getElementById("rene2");
+            const rene3 = document.getElementById("rene3");
+            const contMensaje = document.getElementById("contMensaje");
+            const contMensaje2 = document.getElementById("contMensaje2");
+            const barra1 = document.getElementById("barra1");
+            const barra2 = document.getElementById("barra2");
+            const simbolo1 = document.getElementById("simbolo1").value;
+            const simbolo2 = document.getElementById("simbolo2").value;
+            const simbolo3 = document.getElementById("simbolo3").value;
+            const simbolo4 = document.getElementById("simbolo4").value;
+            const simbolo5 = document.getElementById("simbolo5").value;
+            const mensaje = document.getElementById("mensaje");
+            const botonExtra = document.getElementById("botonExtra");
+            const nextButton = document.getElementById("nextButton");
+            const nextLink = document.getElementById("nextLink");
+    
+            // Comprobar si el símbolo es el correcto
+            if (simbolo1 === "2" && simbolo2 === "4" && simbolo3 === "5" && simbolo4 === "3" && simbolo5 === "1" ) {
+                mensaje.textContent = "¡Correcto! Muy bien";
+                sonidoCorrecto.play().catch(error => {
+                    console.error("Error al reproducir el sonido correcto:", error);
+                });
+                mensaje.style.alignItems = "center";
             mensaje.style.marginTop = "-50px";
             barra1.classList.add("barraHide");
             barra2.classList.remove("barraHide");
@@ -266,29 +300,24 @@
             nextButton.style.display = "flex";
             nextButton.disabled = false;
             nextLink.style.pointerEvents = "auto";
+            } else {
+                mensaje.textContent = "Incorrecto, intenta de nuevo.";
+                sonidoError.play().catch(error => {
+                    console.error("Error al reproducir el sonido correcto:", error);
+                });
+                rene1.classList.remove("barraHide");
+                rene2.classList.add("barraHide");
+                rene3.classList.add("barraHide");
+                globo.classList.remove("barraHide");
+                contMensaje2.classList.add("barraHide");
+
+
+                botonExtra.style.display = "flex";
+                nextButton.disabled = true;
+                nextLink.style.pointerEvents = "none";
+                nextButton.style.display = "none";
+            }
         }
-
-        function naonao(){
-            mensaje.textContent = "Incorrecto. Intenta de nuevo.";
-            sonidoError.play().catch(error => {
-                console.error("Error al reproducir el sonido incorrecto:", error);
-            });
-        
-            rene1.classList.remove("barraHide");
-            rene2.classList.add("barraHide");
-            rene3.classList.add("barraHide");
-            globo.classList.remove("barraHide");
-            contMensaje2.classList.add("barraHide");
-            botonExtra.style.display = "flex";
-            nextButton.disabled = true;
-            nextLink.style.pointerEvents = "none";
-            nextButton.style.display = "none";
-        }
-
-        
-
-    // Comprobar si el símbolo es el correcto
-    
 
         ///////
 

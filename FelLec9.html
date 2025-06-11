@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPCL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-prob2.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="imagenes/Icono DPCL (1).png" type="image/x-icon">
+    <nav class="nav"> 
+        <div class="trofeo">
+            <img id = "trofeo" src="imagenes/stash--trophy-solid.png" alt="trofeo">
+            <span id="valor" class="textos">0</span>
+        </div>
+    </nav>
+    <style>
+        .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      height: 40px;
+      width: 100%;
+      background-color: #b081db; /* Morado oscuro */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .bottom-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bottom-nav a .icon {
+      margin-bottom: 5px;
+    }
+
+    .select{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #b081db;
+    }
+
+    .select img{
+        width: 70px;
+        margin-top: 5px;
+        margin-right: 7px;
+    }
+
+    .icono{
+        width: 80px;
+    }
+
+    .icono img{
+        width: 50px;
+    }
+
+    .pulp img{
+        width: 70px;
+    }
+
+    .select img{
+        width: 65px;
+    }
+
+    @media(prefers-color-scheme: dark){
+            .imagenes{
+                color: white;
+            }
+
+            .bottom-nav{
+                background-color: #17111d;
+            }
+
+            .select{
+                background-color: #17111d;
+            }
+        }
+
+        .foquito{
+            margin-bottom: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="barras2">
+        <div class = "barras">
+            <img class = "barra" id="barra1"src="imagenes/barra 1.png" alt="barra 1" width="300px">
+        </div>
+    </div>
+    <div id="op" class="op">
+        <div class="opciones">
+            <ul class="opc">
+                <li><a class="textos" href="index.html">Inicio</a></li>
+                <li><a class="textos" href="actividades.html">Actividades</a></li>
+                <li><a class="textos" href="info.html">Info</a></li>
+                <li><a class="textos" href="comentarios.html">Comentarios</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="con">
+        <div id="contenedor">
+            <p id="feliz"> ¡Correcto, sigue asi!</p>
+        </div>
+        
+        <div id="cont-boton">
+            <button id="regresoLec9" onclick="comprobarRacha()">
+                <a href="caminolectura.html" id="link-act6">Regresar</a>
+            </button>
+        </div>
+        <img id="rene3"src="imagenes/pulpartes-estrella.png" alt="rene" width="300px">
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="Acerca.html" class="icono">
+          <img src="imagenes/mdi--about-circle-outline.png" alt="" >
+          
+        </a>
+        <a href="actividades.html" class="select icono">
+          <img src="imagenes/heroicons--puzzle-piece-20-solid.png" alt="" >
+          
+        </a>
+        <a href="index.html" class="icono pulp">
+          <img src="imagenes/pulpartes-jiji.png" alt="" >
+          
+        </a>
+        <a href="info.html" class="icono">
+          <img src="imagenes/mdi--book-open-variant.png" alt="" >
+          
+        </a>
+        <a href="comentarios.html" class="icono">
+          <img src="imagenes/lsicon--comments-filled.png" alt="" >
+          
+        </a>
+      </nav>
+
+    <script>
+        
+        // Sumar puntos al contador cuando el botón regreso2 es presionado
+        document.getElementById("regresoLec9").addEventListener("click", function() {
+            // Marca el nivel como completado
+            localStorage.setItem("nivel9CompletadoLec", "true");
+        
+
+            // Sumar puntos al contador
+            if (localStorage.getItem('botonPresionadoLec9') !== 'true') {
+                let valorActual = parseInt(localStorage.getItem('contador'));
+                valorActual += 30;
+                localStorage.setItem('contador', valorActual);
+                localStorage.setItem('botonPresionadoLec9', 'true'); // Registramos que ya se sumó
+                actualizarValor(); // Actualiza el valor en el HTML
+            }
+        });
+
+        const colors = ['#FF0B00', '#FF5C00', '#FFC400', '#00FF1E', '#00D4FF', '#0038FF', '#A100FF'];
+
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.left = Math.random() * 100 + 'vw'; // Cambia a 100vw para abarcar toda la ventana
+            confetti.style.top = Math.random() * 100 + 'vh'; // Cambia a 100vh para iniciar en cualquier parte de la pantalla
+            document.body.appendChild(confetti);
+            setTimeout(() => confetti.remove(), 700); // Eliminar confeti después de 0.7s
+        }
+
+        window.onload = () => {
+            for (let i = 0; i < 200; i++) setTimeout(createConfetti, i * 30); // Menor retraso entre confetis
+        };
+
+        // Inicializamos el valor de localStorage si no existe
+        if (!localStorage.getItem('contador')) {
+            localStorage.setItem('contador', 0);
+        }
+
+        // Función para actualizar el valor en el HTML
+        function actualizarValor() {
+            const valor = localStorage.getItem('contador');
+            document.getElementById('valor').textContent = valor;
+        }
+
+        // Actualizamos el valor al cargar la página
+        actualizarValor();
+
+        // Escuchamos cambios en el localStorage para sincronizar entre pestañas
+        window.addEventListener('storage', (event) => {
+            if (event.key === 'contador') {
+                actualizarValor();
+            }
+        });
+
+        function iniciarRacha() {
+            // Revisar si ya existe la racha y la última fecha en el almacenamiento local
+            const ultimaFecha = localStorage.getItem("ultimaFecha");
+            const contadorRacha = localStorage.getItem("contadorRacha") || 0;
+            
+            // Mostrar el contador actual de racha
+            document.getElementById("contadorRacha").innerText = `Racha actual: ${contadorRacha} días`;
+        }
+
+        // Función para comprobar si es el primer clic del día
+        function comprobarRacha() {
+            const hoy = new Date().toLocaleDateString();
+            const ultimaFecha = localStorage.getItem("ultimaFecha");
+            let contadorRacha = parseInt(localStorage.getItem("contadorRacha") || "0");
+
+            // Si es el primer clic del día
+            if (ultimaFecha !== hoy) {
+                contadorRacha++;
+                localStorage.setItem("contadorRacha", contadorRacha);
+                localStorage.setItem("ultimaFecha", hoy);
+                document.getElementById("contadorRacha").innerText = `Racha actual: ${contadorRacha} días`;
+            
+            } 
+        }
+
+        // Ejecutar la función iniciarRacha al cargar la página
+        iniciarRacha();
+
+    </script>
+</body>
+</html>

@@ -161,20 +161,19 @@
 
     <div class = "Cont" >
         <p id = "problema">
-            Pulpartes dejó un pastel de chocolate en la mesa, pero ¡Ya no está!. Ayuda 
-            a Pulpartes a saber quien se comió su pastel, usando como pista el siguiente texto. "Julio no estaba en 
-            casa, Damian tiene chocolate en la cara y Carla no come chocolate"
+            A que se refiere la siguiente frase: "El perro es el mejor amigo del hombre"
         </p>
 
         <div class="centro">
-            <button id="boton1pipi" onclick="pasar()">Damian</button>
-            <button id="boton1pipi" onclick="naonao()">Julio</button>
-            <button id="boton1pipi" onclick="naonao()">Carla</button>
+            
+            <button id="boton1pipi" onclick="naonao()">Los perros tienen miedo del hombre</button>
+            <button id="boton1pipi" onclick="pasar()">Los perros aman a los humanos</button>
+            <button id="boton1pipi" onclick="naonao()">Los perros son de otro mundo</button>
         </div>
 
         <div id="botonExtra" class="boton-extra-container">
             <button id="nextButton" disabled>
-                <a id="nextLink" href="FelLec8.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
+                <a id="nextLink" href="metaforas2.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
             </button>
         </div>
 
@@ -248,7 +247,7 @@
         const nextButton = document.getElementById("nextButton");
 
         function pasar(){
-            mensaje.textContent = "¡Correcto! Damian se comió el pastel";
+            mensaje.textContent = "¡Correcto! Los perros aman a los humanos.";
             sonidoCorrecto.play().catch(error => {
                 console.error("Error al reproducir el sonido correcto:", error);
             });

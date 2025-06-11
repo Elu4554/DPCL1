@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="temaPCL.css">
+    <link rel="stylesheet" href="claro.css">
+    <link rel="stylesheet" href="style-prob2.css">
+    <link rel="stylesheet" href="style-prob.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="imagenes/Icono DPCL (1).png" type="image/x-icon">
+    
+    <style>
+        .contenedor{
+            width: 65%;
+            margin-left: 5%;
+            justify-content: center;
+            text-align: justify;
+        }
+
+        @media (max-width: 800px) {
+            .contenedor{
+                width: 75%;
+                justify-content: center;
+                text-align: justify;
+            }
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            height: 40px;
+            width: 100%;
+            background-color: #b081db; /* Morado oscuro */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .bottom-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
+        .bottom-nav a .icon {
+        margin-bottom: 5px;
+        }
+
+        .select{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #b081db;
+        }
+
+        
+
+        .icono{
+            width: 80px;
+        }
+
+        .icono img{
+            width: 50px;
+        }
+
+        .pulp img{
+            width: 70px;
+        }
+
+        .select img{
+            width: 50px;
+            margin-top: 10px;
+        }
+
+        @media(prefers-color-scheme: dark){
+            .imagenes{
+                color: white;
+            }
+
+            .bottom-nav{
+                background-color: #17111d;
+            }
+
+            .select{
+                background-color: #17111d;
+            }
+        }
+
+        .foquito{
+            margin-bottom: 90px;
+        }
+
+        
+    </style>
+    <title>Sinónimos y Antónimos</title>
+    
+
+</head>
+<body>
+    <div id = "op" class="op">
+        <div class = "opciones">
+            <ul class="opc">
+                <li><a class="textos" href="index.html">Inicio</a></li>
+                <li><a class="textos" href="actividades.html">Actividades</a></li>
+                <li><a class="textos" href="info.html">Info</a></li>
+                <li><a class="textos" href="comentarios.html">Comentarios</a></li>
+                
+            </ul>
+        </div>
+
+    </div>
+
+    
+    <p class="t">Sinónimos</p>
+
+    <div class="primero">
+
+        <div class="contenedor">
+            <p class="texto">
+                Los sinónimos son palabras diferentes que tienen significados iguales o muy similares.
+                Esto ayuda a evitar la repetición en los textos y enriquece nuestro vocabulario.
+                Ejemplo:
+                <br>
+                <br>
+                Feliz = contento, alegre, dichoso
+                <br>
+                <br>
+                Casa = hogar, vivienda, domicilio
+                <br>
+                <br>
+                Importante: Aunque sean sinónimos, pueden variar en intensidad o uso regional. Por ejemplo, feliz y 
+                contento no siempre se usan igual.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    
+
+
+    <p class="t">Antónimos</p>
+
+    <div class="segundo">
+        <div class="contenedor">
+            <p class="texto">
+                Los antónimos son palabras que expresan significados opuestos o contrarios.
+                Sirven para comparar y entender mejor los conceptos.
+                Ejemplo: <br> <br>
+
+                Grande ↔ Pequeño <br> <br>
+
+                Día ↔ Noche <br> 
+
+            </p>
+
+        </div>
+        
+    </div>
+
+    <p class="t">Tipos de antónimos:</p> <br>
+
+    <div class="segundo">
+        <div class="contenedor">
+            <p class="texto">
+                Graduales: Se puede medir el grado entre ellos.
+                Ejemplo: caliente ↔ frío (puede haber tibio) <br><br>
+
+                Complementarios: No existe un punto medio.
+                Ejemplo: vivo ↔ muerto <br> <br>
+
+                Recíprocos: Se necesitan mutuamente para tener sentido.
+                Ejemplo: comprar ↔ vender <br> <br> <br> <br> <br>
+
+
+
+
+            </p>
+
+        </div>
+        
+    </div>
+
+                
+    
+        <nav class="bottom-nav">
+            <a href="Acerca.html" class="icono">
+              <img src="imagenes/mdi--about-circle-outline.png" alt="" >
+              
+            </a>
+            <a href="actividades.html" class="icono">
+              <img src="imagenes/heroicons--puzzle-piece-20-solid.png" alt="" >
+              
+            </a>
+            <a href="index.html" class="icono pulp">
+              <img src="imagenes/pulpartes-jiji.png" alt="" >
+              
+            </a>
+            <a href="info.html" class="select icono">
+              <img src="imagenes/mdi--book-open-variant.png" alt="" >
+              
+            </a>
+            <a href="comentarios.html" class="icono">
+              <img src="imagenes/lsicon--comments-filled.png" alt="" >
+              
+            </a>
+        </nav>
+
+
+    <script>
+        
+        
+        ///////
+
+        // Inicializamos el valor de localStorage si no existe
+        if (!localStorage.getItem('contador')) {
+            localStorage.setItem('contador', 0);
+        }
+
+        // Función para actualizar el valor en el HTML
+        function actualizarValor() {
+            const valor = localStorage.getItem('contador');
+            document.getElementById('valor').textContent = valor;
+        }
+
+        // Actualizamos el valor al cargar la página
+        actualizarValor();
+
+        // Evento para el botón que suma 30, pero solo una vez
+        document.getElementById('regreso').addEventListener('click', () => {
+            // Verificamos si ya se sumaron los puntos una vez
+            if (localStorage.getItem('botonPresionado') !== 'true') {
+                let valorActual = parseInt(localStorage.getItem('contador'));
+                valorActual += 30;
+                localStorage.setItem('contador', valorActual);
+                localStorage.setItem('botonPresionado', 'true');  // Registramos que ya se sumó
+                actualizarValor();
+            }
+        });
+
+        // Escuchamos cambios en el localStorage para sincronizar entre pestañas
+        window.addEventListener('storage', (event) => {
+            if (event.key === 'contador') {
+                actualizarValor();
+            }
+        });
+    
+    </script>
+</body>
+
+
+</html>

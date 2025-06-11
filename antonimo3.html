@@ -129,6 +129,10 @@
         .foquito{
             margin-bottom: 90px;
         }
+
+        #problema{
+            display: block;
+        }
     </style>
 </head>
 
@@ -161,20 +165,21 @@
 
     <div class = "Cont" >
         <p id = "problema">
-            Pulpartes dejó un pastel de chocolate en la mesa, pero ¡Ya no está!. Ayuda 
-            a Pulpartes a saber quien se comió su pastel, usando como pista el siguiente texto. "Julio no estaba en 
-            casa, Damian tiene chocolate en la cara y Carla no come chocolate"
+            En la frase "Eres <b>idéntico</b> a mi tio " ¿Cuál de las siguientes
+            opciones puede reemplazar la palabra en negritas, para dar a entender lo contrario?
         </p>
 
         <div class="centro">
-            <button id="boton1pipi" onclick="pasar()">Damian</button>
-            <button id="boton1pipi" onclick="naonao()">Julio</button>
-            <button id="boton1pipi" onclick="naonao()">Carla</button>
+            <button id="boton1pipi" onclick="pasar()">Diferente</button>
+            <button id="boton1pipi" onclick="naonao()">Parecido</button>
+            
+            <button id="boton1pipi" onclick="naonao()">Igual</button>
+            
         </div>
 
         <div id="botonExtra" class="boton-extra-container">
             <button id="nextButton" disabled>
-                <a id="nextLink" href="FelLec8.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
+                <a id="nextLink" href="sinonimos3.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
             </button>
         </div>
 
@@ -248,7 +253,7 @@
         const nextButton = document.getElementById("nextButton");
 
         function pasar(){
-            mensaje.textContent = "¡Correcto! Damian se comió el pastel";
+            mensaje.textContent = "¡Correcto! Diferente es antónimo de idéntico";
             sonidoCorrecto.play().catch(error => {
                 console.error("Error al reproducir el sonido correcto:", error);
             });

@@ -129,6 +129,30 @@
         .foquito{
             margin-bottom: 90px;
         }
+
+    .signo{
+        width: 20px;
+        height: 25px;
+        font-size: 20px;
+        margin-left: 5px;
+        margin-top: -3px;
+    }
+
+    #resolucion{
+        
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        width: 450px;
+    }
+
+    #resolucion2 {
+        margin-top: -20px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        width: 450px;
+    }
     </style>
 </head>
 
@@ -161,20 +185,26 @@
 
     <div class = "Cont" >
         <p id = "problema">
-            Pulpartes dejó un pastel de chocolate en la mesa, pero ¡Ya no está!. Ayuda 
-            a Pulpartes a saber quien se comió su pastel, usando como pista el siguiente texto. "Julio no estaba en 
-            casa, Damian tiene chocolate en la cara y Carla no come chocolate"
+            Observa el siguiente texto y escoge que signos de puntuación usar en los espacios en blanco.
         </p>
 
-        <div class="centro">
-            <button id="boton1pipi" onclick="pasar()">Damian</button>
-            <button id="boton1pipi" onclick="naonao()">Julio</button>
-            <button id="boton1pipi" onclick="naonao()">Carla</button>
+        <p id = "resolucion">
+            Él dijo: <input list="opciones" class="signo" type="text" id="simbolo1" size="1">mañana a primera hora
+            estaré ahí <input list="opciones" class="signo" type="text" id="simbolo2" size="1">,
+            
+        </p>
+
+        <p id="resolucion2"> pero no ha llegado aún.</p>
+        
+        <div id= "contBoton">
+
+            <button onclick="validar()" id= "boton" >Comprobar</button>
+
         </div>
 
         <div id="botonExtra" class="boton-extra-container">
             <button id="nextButton" disabled>
-                <a id="nextLink" href="FelLec8.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
+                <a id="nextLink" href="Orden4.html" style="text-decoration: none; color: black;">Siguiente Desafío</a>
             </button>
         </div>
 
@@ -232,63 +262,66 @@
     <script>
         
 
-        const mensaje = document.getElementById("mensaje");
-        const sonidoError = document.getElementById("sonidoError");
-        const sonidoCorrecto = document.getElementById("sonidoCorrecto");
-        const botonExtra = document.getElementById("botonExtra");
-        const nextLink = document.getElementById("nextLink");
-        const contMensaje = document.getElementById("contMensaje");
-        const contMensaje2 = document.getElementById("contMensaje2");
-        const globo = document.getElementById("globo");
-        const rene1 = document.getElementById("rene1");
-        const rene2 = document.getElementById("rene2");
-        const rene3 = document.getElementById("rene3");
-        const barra1 = document.getElementById("barra1");
-        const barra2 = document.getElementById("barra2");
-        const nextButton = document.getElementById("nextButton");
-
-        function pasar(){
-            mensaje.textContent = "¡Correcto! Damian se comió el pastel";
-            sonidoCorrecto.play().catch(error => {
-                console.error("Error al reproducir el sonido correcto:", error);
-            });
-            mensaje.style.alignItems = "center";
-            mensaje.style.marginTop = "-50px";
-            barra1.classList.add("barraHide");
-            barra2.classList.remove("barraHide");
-            rene2.classList.remove("barraHide");
-            rene2.style.marginTop = "-60px";
-            rene1.classList.add("barraHide");
-            rene3.classList.add("barraHide");
-            globo.classList.remove("barraHide");
-            contMensaje2.classList.remove("barraHide"); // Agregamos la class
-            botonExtra.style.display = "flex";
-            nextButton.style.display = "flex";
-            nextButton.disabled = false;
-            nextLink.style.pointerEvents = "auto";
-        }
-
-        function naonao(){
-            mensaje.textContent = "Incorrecto. Intenta de nuevo.";
-            sonidoError.play().catch(error => {
-                console.error("Error al reproducir el sonido incorrecto:", error);
-            });
-        
-            rene1.classList.remove("barraHide");
-            rene2.classList.add("barraHide");
-            rene3.classList.add("barraHide");
-            globo.classList.remove("barraHide");
-            contMensaje2.classList.add("barraHide");
-            botonExtra.style.display = "flex";
-            nextButton.disabled = true;
-            nextLink.style.pointerEvents = "none";
-            nextButton.style.display = "none";
-        }
-
-        
-
-    // Comprobar si el símbolo es el correcto
+        let attempts = 0;
+        function validar() {
     
+            const contMensaje = document.getElementById("contMensaje");
+            const contMensaje2 = document.getElementById("contMensaje2");
+            const globo = document.getElementById("globo");
+            const rene1 = document.getElementById("rene1");
+            const rene2 = document.getElementById("rene2");
+            const rene3 = document.getElementById("rene3");
+            const barra1 = document.getElementById("barra1");
+            const barra2 = document.getElementById("barra2");
+            const simbolo1 = document.getElementById("simbolo1").value;
+            
+            const simbolo2 = document.getElementById("simbolo2").value;
+            
+            const mensaje = document.getElementById("mensaje");
+            const botonExtra = document.getElementById("botonExtra");
+            const nextButton = document.getElementById("nextButton");
+            const nextLink = document.getElementById("nextLink");
+
+            // Comprobar si el símbolo es el correcto
+            if (simbolo1 === '"' && simbolo2 === '"' ) {
+                mensaje.textContent = "¡Correcto!";
+                sonidoCorrecto.play().catch(error => {
+                    console.error("Error al reproducir el sonido correcto:", error);
+                });
+                mensaje.style.alignItems = "center";
+                mensaje.style.marginTop = "-50px";
+                barra1.classList.add("barraHide");
+                barra2.classList.remove("barraHide");
+                rene2.classList.remove("barraHide");
+                rene2.style.marginTop = "-60px";
+                rene1.classList.add("barraHide");
+                rene3.classList.add("barraHide");
+                globo.classList.remove("barraHide");
+                contMensaje2.classList.remove("barraHide"); // Agregamos la class
+                botonExtra.style.display = "flex";
+                nextButton.style.display = "flex";
+                nextButton.disabled = false;
+                nextLink.style.pointerEvents = "auto";
+            } else {
+               
+                mensaje.textContent = "Incorrecto, intenta de nuevo.";
+                
+                document.getElementById("sonidoError").play().catch(error => {
+                    console.error("Error al reproducir el sonido de error:", error);
+                });
+
+                        
+                rene1.classList.remove("barraHide");
+                rene2.classList.add("barraHide");
+                rene3.classList.add("barraHide");
+                globo.classList.remove("barraHide");
+                contMensaje2.classList.add("barraHide");
+                botonExtra.style.display = "flex";
+                nextButton.disabled = true;
+                nextLink.style.pointerEvents = "none";
+                nextButton.style.display = "none";
+            }
+        }
 
         ///////
 

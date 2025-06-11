@@ -101,22 +101,49 @@
 </head>
 <body>
 
-    <div class="imagen-overlay1">
-        <img class="imagen1" src="imagenes/noto--open-book.png" alt="libro" width="200">
-    </div>
 
-   
-
-    <h1>Lectura critica</h1>
+    <h1>Lectura y escritura Etapa 1:</h1>
 
     <ul id="botones">
 
-        <li><a href="lectura1.html"><button class = "niveles">1</button></a></li>
-        <li><a href="lectura2.html"><button class = "niveles" id = "nivel2" disabled>2</button></a></li>
-        <li><a href="logica8.html"><button class = "niveles" id = "nivel3" disabled>3</button></a></li>
-        <li><a href=""><button class = "niveles" id = "nivel4" disabled>4</button></a></li>
+        <li><a href="verbos.html"><button class = "niveles">1</button></a></li>
+        <li><a href="puntuacion2.html"><button class = "niveles" id = "nivel2" disabled>2</button></a></li>
+        <li><a href="Orden3.html"><button class = "niveles" id = "nivel3" disabled>3</button></a></li>
+        <li><a href="Orden5.html"><button class = "niveles" id = "nivel4" disabled>4</button></a></li>
+
+    </ul>
+
+    <h1>Lectura y escritura Etapa 2:</h1>
+
+    <ul id="botones">
         
-        <li><button class = "niveles foquito" id="borrarStorage">R</button></li>
+        <li><a href="acentos.html"><button class = "niveles" id = "nivel5" disabled>5</button></a></li>
+        <li><a href="sinonimos2.html"><button class = "niveles" id = "nivel6" disabled>6</button></a></li>
+        <li><a href="acentos5.html"><button class = "niveles" id = "nivel7" disabled>7</button></a></li>
+
+    </ul>
+
+    <h1>Lectura y escritura Etapa 3:</h1>
+
+    <ul id="botones">
+
+        <li><a href="metaforas.html"><button class = "niveles" id = "nivel8" disabled>8</button></a></li>
+        <li><a href="metaforas3.html"><button class = "niveles" id = "nivel9" disabled>9</button></a></li>
+        <li><a href="lectura1.html"><button class = "niveles" id = "nivel10" disabled>10</button></a></li>
+        <li><a href="lectura2.html"><button class = "niveles" id = "nivel11" disabled>11</button></a></li>
+        <li><a href="logica8.html"><button class = "niveles" id = "nivel12" disabled>12</button></a></li>
+        
+    </ul>
+
+    <h1>Lectura y escritura Etapa 4: En construcción</h1>
+
+    <ul id="botones">
+
+        
+        <li><a href=""><button class = "niveles" id = "nivel13" disabled>13</button></a></li>
+        
+        
+        <li><button class = "niveles foquito" id="borrarStorage" disabled>R</button></li>
 
     </ul>
 
@@ -208,8 +235,48 @@
         }
 
         if (localStorage.getItem("nivel3CompletadoLec")) {
-    document.getElementById("nivel4").disabled = false; // Habilita el botón del nivel 3
-}
+            document.getElementById("nivel4").disabled = false; // Habilita el botón del nivel 3
+        }
+
+        if (localStorage.getItem("nivel4CompletadoLec")) {
+            document.getElementById("nivel5").disabled = false; // Habilita el botón del nivel 3
+        }
+
+        if (localStorage.getItem("nivel5CompletadoLec")) {
+            document.getElementById("nivel6").disabled = false; // Habilita el botón del nivel 3
+        }
+
+        if (localStorage.getItem("nivel6CompletadoLec")) {
+            document.getElementById("nivel7").disabled = false; // Habilita el botón del nivel 3
+        }
+
+        if (localStorage.getItem("nivel7CompletadoLec")) {
+            document.getElementById("nivel8").disabled = false; // Habilita el botón del nivel 3
+        }
+
+        if (localStorage.getItem("nivel8CompletadoLec")) {
+            document.getElementById("nivel9").disabled = false; // Habilita el botón del nivel 3
+        }
+
+        if (localStorage.getItem("nivel9CompletadoLec")) {
+            document.getElementById("nivel10").disabled = false; // Habilita el botón del nivel 3
+        }
+
+        if (localStorage.getItem("nivel10CompletadoLec")) {
+            document.getElementById("nivel11").disabled = false; // Habilita el botón del nivel 3
+        }
+
+        if (localStorage.getItem("nivel11CompletadoLec")) {
+            document.getElementById("nivel12").disabled = false; // Habilita el botón del nivel 3
+        }
+
+        if (localStorage.getItem("nivel12CompletadoLec")) {
+            document.getElementById("nivel13").disabled = false; // Habilita el botón del nivel 3
+        }
+
+        if (localStorage.getItem("nivel13CompletadoLec")) {
+            document.getElementById("nivel14").disabled = false; // Habilita el botón del nivel 3
+        }
    
     </script>
 </body>
